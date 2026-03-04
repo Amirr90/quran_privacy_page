@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zyna's Hub · curated GUESS watch & more</title>
+    <title>Zyna's Hub · product detail (GUESS watch demo)</title>
     <style>
         * {
             margin: 0;
@@ -12,433 +12,430 @@
             font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
         }
         body {
-            background: #f0f5fe;
-            padding: 1.5rem 1.5rem 2rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            background: #f1f3f6;
+            padding: 1rem;
         }
-        .app-wrapper {
+        .detail-container {
             max-width: 1400px;
-            width: 100%;
-        }
-
-        /* ----- HEADER & profile section (Zyna's Hub) ----- */
-        .top-bar {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
+            margin: 2rem auto;
             background: white;
-            padding: 0.8rem 2rem;
-            border-radius: 80px;
-            box-shadow: 0 8px 22px -10px #1e3a8a40;
-            margin-bottom: 2rem;
-            border: 1px solid #dbe7f5;
+            border-radius: 32px;
+            box-shadow: 0 25px 50px -20px #1e3a5f;
+            padding: 2rem;
         }
 
-        .logo-area h1 {
-            font-size: 1.9rem;
-            font-weight: 700;
-            background: linear-gradient(145deg, #0b2b4e, #203f6b);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            letter-spacing: -0.5px;
-        }
-        .logo-area h1 span {
-            background: none;
-            -webkit-text-fill-color: #d44e2c;
-            font-weight: 800;
-        }
-
-        .login-profile-section {
-            display: flex;
-            align-items: center;
-            gap: 1.8rem;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-        }
-
-        /* login with google button (simple style) */
-        .google-login-btn {
+        /* ----- breadcrumb / header ----- */
+        .detail-nav {
             display: flex;
             align-items: center;
             gap: 10px;
-            background: #ffffff;
-            border: 1.5px solid #cddff7;
-            padding: 0.6rem 1.6rem 0.6rem 1.4rem;
-            border-radius: 40px;
-            font-weight: 500;
-            color: #1e2f4b;
-            box-shadow: 0 3px 8px rgba(0,20,50,0.05);
-            cursor: pointer;
-            transition: all 0.15s;
-            font-size: 1rem;
+            color: #3f5579;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+            flex-wrap: wrap;
         }
-        .google-login-btn:hover {
-            background: #f4f8ff;
-            border-color: #7a9ed6;
-            box-shadow: 0 8px 14px -10px #1e3f8f;
-        }
-        .google-login-btn .google-icon {
-            font-size: 1.5rem;
-            line-height: 1;
-        }
-
-        /* profile "card" quick view */
-        .profile-preview {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            background: #eaf1fd;
-            padding: 0.4rem 1.2rem 0.4rem 0.8rem;
-            border-radius: 50px;
-            border: 1px solid #adc6ed;
-        }
-        .profile-avatar {
-            width: 42px;
-            height: 42px;
-            background: #1f3a6b;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-            font-weight: 500;
-            box-shadow: 0 4px 8px #10244530;
-        }
-        .profile-info {
-            display: flex;
-            flex-direction: column;
-            line-height: 1.3;
-        }
-        .profile-info .name {
-            font-weight: 700;
-            color: #102a4c;
-            font-size: 1rem;
-        }
-        .profile-info .email {
-            font-size: 0.75rem;
-            color: #3266a8;
-        }
-        .profile-info .badge {
-            background: #28a745;
-            color: white;
-            font-size: 0.6rem;
-            padding: 0.1rem 0.5rem;
-            border-radius: 30px;
-            width: fit-content;
-            margin-top: 2px;
-        }
-
-        /* welcome banner extra */
-        .welcome-msg {
-            margin: 0 0 0.2rem 0.2rem;
-            color: #264e7b;
-            font-size: 1.1rem;
-        }
-        .welcome-msg strong {
-            color: #c44513;
-        }
-
-        /* ----- product grid (exactly 10 cards) ----- */
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 2rem;
-            margin: 2.5rem 0 2rem 0;
-        }
-        .product-card {
-            background: white;
-            border-radius: 32px;
-            padding: 1.8rem 1.2rem 1.5rem 1.2rem;
-            box-shadow: 0 15px 30px -15px rgba(9, 30, 66, 0.15);
-            transition: all 0.2s ease;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            border: 1px solid #ffffff;
-        }
-        .product-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 30px 35px -16px #13294e70;
-            border-color: #a5c0fa;
-        }
-        .product-image {
-            width: 140px;
-            height: 140px;
-            background: #edf2f9;
-            border-radius: 40% 60% 40% 60% / 60% 40% 60% 40%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.2rem;
-            font-size: 3.8rem;
-            font-weight: 300;
-            color: #1e293b;
-            box-shadow: 0 12px 18px -10px #a0b8d4;
-        }
-        .product-title {
-            font-weight: 700;
-            font-size: 1.3rem;
-            color: #0b1f3b;
-            line-height: 1.3;
-        }
-        .product-price {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #153b6f;
-            margin: 0.5rem 0 0.7rem;
-        }
-        .product-price small {
-            font-size: 0.9rem;
-            font-weight: 400;
-            color: #546e7a;
-        }
-        .fake-rating {
-            color: #f7b731;
-            font-size: 1.1rem;
-            letter-spacing: 3px;
-            background: #f8fafd;
-            padding: 0.2rem 1rem;
-            border-radius: 40px;
-            margin-bottom: 0.5rem;
-        }
-        .btn-flipkart {
-            background: #0a2647;
-            color: white;
-            border: none;
-            width: 100%;
-            padding: 0.9rem 0;
-            border-radius: 60px;
-            font-weight: 600;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: 0.15s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
+        .detail-nav a {
+            color: #2a5c9a;
             text-decoration: none;
-            margin-top: 1rem;
-            border: 1px solid #1e3a5f;
         }
-        .btn-flipkart:hover {
-            background: #12315e;
-            transform: scale(1.02);
+        .detail-nav span {
+            color: #8a9fc0;
         }
-        .live-badge {
+
+        /* ----- main product area (image gallery + info) ----- */
+        .product-detail-main {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        /* left: image gallery (4-5 images) */
+        .gallery-section {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .main-image {
+            width: 100%;
+            background: #f8fafd;
+            border-radius: 40px;
+            padding: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #e2ecfe;
+            min-height: 380px;
+        }
+        .main-image img {
+            max-width: 100%;
+            max-height: 340px;
+            object-fit: contain;
+            filter: drop-shadow(0 8px 12px #abc0dd);
+        }
+        .thumbnail-strip {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .thumbnail {
+            width: 80px;
+            height: 80px;
+            background: #f2f6fc;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: 0.1s;
+            font-size: 2rem;
+            border: 1px solid #cfdefa;
+        }
+        .thumbnail:hover, .thumbnail.active {
+            border-color: #2a5c9a;
+            background: white;
+            box-shadow: 0 4px 12px #abc0e6;
+        }
+
+        /* right: product info */
+        .info-section {
+            padding: 0.5rem 0.5rem 0.5rem 0;
+        }
+        .product-brand {
+            color: #5f7da8;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.3rem;
+        }
+        .product-name {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #0a1e3c;
+            line-height: 1.2;
+            margin-bottom: 0.8rem;
+        }
+        .rating-review-row {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin: 1rem 0 0.8rem;
+            flex-wrap: wrap;
+        }
+        .rating-badge {
             background: #1e8b2c;
             color: white;
-            font-size: 0.7rem;
-            padding: 0.2rem 1rem;
+            padding: 0.3rem 0.8rem;
             border-radius: 30px;
-            margin-top: 0.2rem;
-            margin-bottom: 0.3rem;
-            display: inline-block;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
         }
-        .flipkart-disclosure {
-            margin: 2rem 0 1rem;
-            font-size: 0.95rem;
-            color: #1f3a60;
-            background: #dce7f5;
-            padding: 1rem 2.5rem;
+        .review-count {
+            color: #2d5da7;
+            font-weight: 500;
+            border-bottom: 2px dotted #a9c2ea;
+        }
+        .price-section {
+            background: #f2f7ff;
+            padding: 1.5rem;
+            border-radius: 40px;
+            margin: 1.5rem 0 2rem;
+            border: 1px solid #c3d8fc;
+        }
+        .price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #132e54;
+        }
+        .price small {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #5e7da3;
+            text-decoration: line-through;
+            margin-left: 12px;
+        }
+        .offer-tag {
+            background: #e03a3a;
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .description {
+            margin: 1.8rem 0 2rem;
+            color: #2c3f62;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            border-left: 5px solid #5f8ddb;
+            padding-left: 1.5rem;
+            background: #f8fcff;
+            padding: 1.2rem 1.8rem;
+            border-radius: 30px;
+        }
+        .buy-section {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-top: 1.8rem;
+        }
+        .buy-btn {
+            background: #fb8b2c;
+            color: white;
+            border: none;
+            padding: 1.1rem 3rem;
+            font-size: 1.4rem;
+            font-weight: 700;
             border-radius: 60px;
             display: inline-flex;
             align-items: center;
             gap: 12px;
-            border: 1px solid #9bb2d1;
+            cursor: pointer;
+            transition: 0.2s;
+            text-decoration: none;
+            box-shadow: 0 12px 25px -10px #fb8b2c80;
         }
+        .buy-btn:hover {
+            background: #e6761e;
+            transform: scale(1.02);
+        }
+        .flipkart-link {
+            background: #0a2647;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 60px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid #1e3a5f;
+        }
+        .flipkart-link:hover {
+            background: #12315e;
+        }
+
+        /* ----- category sections (men / women / kids) with product cards ----- */
+        .category-tabs {
+            margin: 3.5rem 0 1.5rem;
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #0b1e33;
+            border-left: 12px solid #1e3a8a;
+            padding-left: 1.2rem;
+            margin-bottom: 1.8rem;
+        }
+        .product-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        .cat-card {
+            background: white;
+            border-radius: 28px;
+            padding: 1.2rem 0.8rem 1rem;
+            box-shadow: 0 8px 22px -8px #1e3a8a30;
+            transition: 0.15s;
+            text-align: center;
+            border: 1px solid #e0ecfe;
+            cursor: pointer;
+        }
+        .cat-card:hover {
+            transform: scale(1.02);
+            border-color: #2f66b3;
+            box-shadow: 0 16px 24px -12px #1f4188;
+        }
+        .cat-img {
+            font-size: 3.5rem;
+            background: #eaf2fd;
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+        .cat-title {
+            font-weight: 700;
+            color: #15335c;
+        }
+        .cat-price {
+            font-weight: 600;
+            color: #b45f1b;
+        }
+
         hr {
             border: 0;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #9bb6da, transparent);
-            width: 80%;
-            margin: 2rem auto;
-        }
-        .demo-note {
-            color: #3f5579;
-            font-size: 0.9rem;
-            text-align: center;
+            height: 3px;
+            background: linear-gradient(90deg, #b0caf5, transparent);
+            margin: 2rem 0;
         }
     </style>
 </head>
 <body>
-<div class="app-wrapper">
-    <!-- Header with Zyna's Hub, login & profile section -->
-    <div class="top-bar">
-        <div class="logo-area">
-            <h1>Welcome to <span>Zyna's Hub</span> ✨</h1>
+    <div class="detail-container">
+        <!-- navigation (looks like product page) -->
+        <div class="detail-nav">
+            <a href="#">Home</a> <span>›</span>
+            <a href="#">Watches</a> <span>›</span>
+            <a href="#">Men's</a> <span>›</span>
+            <span style="color:#1e3f6e;">GUESS U0291G4M</span>
         </div>
-        <div class="login-profile-section">
-            <!-- login with google button (UI demo) -->
-            <div class="google-login-btn" role="button" tabindex="0" aria-label="Login with Google">
-                <span class="google-icon">🇬</span>
-                <span>Login with Google</span>
-            </div>
-            <!-- profile preview section (mock profile) -->
-            <div class="profile-preview">
-                <div class="profile-avatar">👤</div>
-                <div class="profile-info">
-                    <span class="name">Zyna R.</span>
-                    <span class="email">zyna.hub@demo.com</span>
-                    <span class="badge">shopper</span>
+
+        <!-- MAIN PRODUCT DETAIL (GUESS watch – the exact requested link) -->
+        <div class="product-detail-main">
+            <!-- LEFT: image gallery (4 images) -->
+            <div class="gallery-section">
+                <div class="main-image" id="mainImage">
+                    <!-- placeholder image via emoji / later replaced by thumb click; use watch emoji as demo -->
+                    <span style="font-size: 10rem; line-height: 1;">⌚</span>
                 </div>
+                <div class="thumbnail-strip">
+                    <div class="thumbnail active" onclick="document.getElementById('mainImage').innerHTML='<span style=\'font-size:10rem;\'>⌚</span>'">⌚</div>
+                    <div class="thumbnail" onclick="document.getElementById('mainImage').innerHTML='<span style=\'font-size:10rem;\'>⏱️</span>'">⏱️</div>
+                    <div class="thumbnail" onclick="document.getElementById('mainImage').innerHTML='<span style=\'font-size:10rem;\'>⌛</span>'">⌛</div>
+                    <div class="thumbnail" onclick="document.getElementById('mainImage').innerHTML='<span style=\'font-size:10rem;\'>🕰️</span>'">🕰️</div>
+                    <div class="thumbnail" onclick="document.getElementById('mainImage').innerHTML='<span style=\'font-size:10rem;\'>📟</span>'">📟</div>
+                </div>
+                <p style="color:#6c86a8; font-size:0.8rem; text-align:center;">(5 image slots – click thumbnails)</p>
+            </div>
+
+            <!-- RIGHT: description, price, rating, review, buy now -->
+            <div class="info-section">
+                <div class="product-brand">GUESS · COLLECTION</div>
+                <h1 class="product-name">U0291G4M Analog Men's Watch</h1>
+                
+                <div class="rating-review-row">
+                    <span class="rating-badge">⭐ 4.4</span>
+                    <span class="review-count">2,381 ratings & 612 reviews</span>
+                </div>
+
+                <!-- price area -->
+                <div class="price-section">
+                    <div class="price">
+                        ₹9,995 <small>₹14,995</small>
+                    </div>
+                    <div class="offer-tag">🔥 33% off + 2Y warranty</div>
+                </div>
+
+                <!-- description (realistic) -->
+                <div class="description">
+                    <strong>⌚ Product details:</strong> • Analogue display • Stainless steel case • Genuine leather strap • Water resistant • 2-year manufacturer warranty • Imported. Chronograph movement, date window, luminous hands.
+                </div>
+
+                <!-- BUY NOW + flipkart link (the real link) -->
+                <div class="buy-section">
+                    <a href="https://www.flipkart.com/guess-u0291g4m-analog-watch-men/p/itmf1ccbe064d497?pid=WATGUSWHFWG4QSSB&lid=LSTWATGUSWHFWG4QSSBXIQPWO&marketplace=FLIPKART&q=watches+for+men&store=r18%2Ff13&srno=s_1_1&otracker=AS_QueryStore_OrganicAutoSuggest_1_7_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_7_na_na_na&fm=search-autosuggest&iid=en_lcl5FNEsOgAVGX-3Fl5-D6G1cHaIq0CinBn5N4QxsVHyuMcXR8wk_Ls3N60Fz7kDLTDl21mGd3pO0CzlA3pjSvUFjCTyOHoHZs-Z5_PS_w0%3D&ppt=sp&ppn=sp&ssid=8psttrqm000000001772626585282&qH=959e134ef548e173&ov_redirect=true" 
+                       class="flipkart-link" target="_blank" rel="sponsored nofollow">
+                       🔗 view on Flipkart
+                    </a>
+                    <a href="#" class="buy-btn" onclick="alert('demo: BUY NOW clicked (redirect to Flipkart would happen)\n\n' + document.querySelector('.flipkart-link').href); return false;">
+                        🛒 BUY NOW
+                    </a>
+                </div>
+                <p style="margin-top:1rem; color:#5b7aa5;"><i>* tapping BUY NOW shows demo — link above goes to real Flipkart</i></p>
             </div>
         </div>
-    </div>
 
-    <!-- subtle extra welcome line under header -->
-    <div class="welcome-msg">
-        <strong>▼ 10 live Flipkart picks</strong> — featuring the <strong>GUESS watch</strong> you requested ⌚
-    </div>
+        <!-- ************ CATEGORIES (men / women / kids) each with 15+ product cards ************ -->
+        <div class="category-tabs">
+            <!-- MEN's section (16 products) -->
+            <h2 class="section-title">👔 For Men · 16 items</h2>
+            <div class="product-row">
+                <div class="cat-card" onclick="alert('🛒 men product demo (similar detail page)')"><div class="cat-img">⌚</div><div class="cat-title">Titan watch</div><div class="cat-price">₹3,495</div></div>
+                <div class="cat-card" onclick="alert('🛒 men product demo')"><div class="cat-img">👕</div><div class="cat-title">Polo T-shirt</div><div class="cat-price">₹799</div></div>
+                <div class="cat-card" onclick="alert('🛒 men product demo')"><div class="cat-img">👖</div><div class="cat-title">Slim Jeans</div><div class="cat-price">₹1,299</div></div>
+                <div class="cat-card" onclick="alert('🛒 men product demo')"><div class="cat-img">🧥</div><div class="cat-title">Jacket</div><div class="cat-price">₹2,499</div></div>
+                <div class="cat-card" onclick="alert('🛒 men product demo')"><div class="cat-img">👞</div><div class="cat-title">Loafers</div><div class="cat-price">₹1,899</div></div>
+                <div class="cat-card" onclick="alert('🛒 men product demo')"><div class="cat-img">🧢</div><div class="cat-title">Cap</div><div class="cat-price">₹499</div></div>
+                <div class="cat-card" onclick="alert('🛒 men product demo')"><div class="cat-img">🕶️</div><div class="cat-title">Sunglasses</div><div class="cat-price">₹999</div></div>
+                <div class="cat-card" onclick="alert('🛒 men product demo')"><div class="cat-img">🧦</div><div class="cat-title">Socks pack</div><div class="cat-price">₹299</div></div>
+            </div>
+            <!-- second row to reach 16 men products -->
+            <div class="product-row" style="margin-top: -1rem;">
+                <div class="cat-card" onclick="alert('🛒 men product demo')"><div class="cat-img">🧴</div><div class="cat-title">Perfume</div><div class="cat-price">₹1,199</div></div>
+                <div class="cat-card" onclick="alert('🛒 men product demo')"><div class="cat-img">⌚</div><div class="cat-title">Fastrack</div><div class="cat-price">₹2,295</div></div>
+                <div class="cat-card" onclick="alert('🛒 men product demo')"><div class="cat-img">👞</div><div class="cat-title">Sports shoe</div><div class="cat-price">₹1,599</div></div>
+                <div class="cat-card" onclick="alert('🛒 men product demo')"><div class="cat-img">🎧</div><div class="cat-title">Headphones</div><div class="cat-price">₹999</div></div>
+                <div class="cat-card" onclick="alert('🛒 men product demo')"><div class="cat-img">🧥</div><div class="cat-title">Hoodie</div><div class="cat-price">₹1,899</div></div>
+                <div class="cat-card" onclick="alert('🛒 men product demo')"><div class="cat-img">💼</div><div class="cat-title">Wallet</div><div class="cat-price">₹699</div></div>
+                <div class="cat-card" onclick="alert('🛒 men product demo')"><div class="cat-img">⌚</div><div class="cat-title">Casio</div><div class="cat-price">₹5,495</div></div>
+                <div class="cat-card" onclick="alert('🛒 men product demo')"><div class="cat-img">🧣</div><div class="cat-title">Scarf</div><div class="cat-price">₹449</div></div>
+            </div>
+            <p style="text-align:right; color:#2b519c;">+16 products in men (scroll) </p>
 
-    <!-- product grid: exactly 10 cards with real Flipkart links -->
-    <div class="product-grid">
-        <!-- 1. GUESS U0291G4M Analog Watch (the exact link you provided) -->
-        <div class="product-card">
-            <div class="product-image">⌚</div>
-            <div class="product-title">GUESS Analog Men's Watch</div>
-            <div class="fake-rating">★★★★☆</div>
-            <div class="product-price">₹9,995</div>
-            <span class="live-badge">live on Flipkart</span>
-            <a href="https://www.flipkart.com/guess-u0291g4m-analog-watch-men/p/itmf1ccbe064d497?pid=WATGUSWHFWG4QSSB&lid=LSTWATGUSWHFWG4QSSBXIQPWO&marketplace=FLIPKART&q=watches+for+men&store=r18%2Ff13&srno=s_1_1&otracker=AS_QueryStore_OrganicAutoSuggest_1_7_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_7_na_na_na&fm=search-autosuggest&iid=en_lcl5FNEsOgAVGX-3Fl5-D6G1cHaIq0CinBn5N4QxsVHyuMcXR8wk_Ls3N60Fz7kDLTDl21mGd3pO0CzlA3pjSvUFjCTyOHoHZs-Z5_PS_w0%3D&ppt=sp&ppn=sp&ssid=8psttrqm000000001772626585282&qH=959e134ef548e173&ov_redirect=true"
-               class="btn-flipkart" target="_blank" rel="sponsored nofollow">
-                🛒 view on Flipkart
-            </a>
-        </div>
-        <!-- 2. boAt Airdopes 141 -->
-        <div class="product-card">
-            <div class="product-image">🎧</div>
-            <div class="product-title">boAt Airdopes 141</div>
-            <div class="fake-rating">★★★★☆</div>
-            <div class="product-price">₹1,299</div>
-            <span class="live-badge">live on Flipkart</span>
-            <a href="https://www.flipkart.com/boat-airdopes-141-bluetooth-headset/p/itm75c81389a4ccd"
-               class="btn-flipkart" target="_blank" rel="sponsored nofollow">
-                🛒 view on Flipkart
-            </a>
-        </div>
-        <!-- 3. Fire-Boltt Ninja Call Pro Plus -->
-        <div class="product-card">
-            <div class="product-image">⌚</div>
-            <div class="product-title">Fire-Boltt Ninja Pro</div>
-            <div class="fake-rating">★★★☆☆</div>
-            <div class="product-price">₹1,499</div>
-            <span class="live-badge">live on Flipkart</span>
-            <a href="https://www.flipkart.com/fire-boltt-ninja-call-pro-plus-bluetooth-calling-smartwatch/p/itm6c5d53b4f4df5"
-               class="btn-flipkart" target="_blank" rel="sponsored nofollow">
-                🛒 view on Flipkart
-            </a>
-        </div>
-        <!-- 4. Dell 15 laptop (i3/8GB) -->
-        <div class="product-card">
-            <div class="product-image">💻</div>
-            <div class="product-title">Dell 15 (i3/8GB)</div>
-            <div class="fake-rating">★★★½☆</div>
-            <div class="product-price">₹32,990</div>
-            <span class="live-badge">live on Flipkart</span>
-            <a href="https://www.flipkart.com/dell-15-fhd-ips-laptop-intel-core-i3-1215u-8gb-512gb-ssd-windows-11-home-thin-light-15-fa511-sa51k-ssd/p/itmab4b1c7207f43"
-               class="btn-flipkart" target="_blank" rel="sponsored nofollow">
-                🛒 view on Flipkart
-            </a>
-        </div>
-        <!-- 5. Noise ColorFit Pulse 2 -->
-        <div class="product-card">
-            <div class="product-image">⌚</div>
-            <div class="product-title">Noise Pulse 2</div>
-            <div class="fake-rating">★★★★☆</div>
-            <div class="product-price">₹1,199</div>
-            <span class="live-badge">live on Flipkart</span>
-            <a href="https://www.flipkart.com/noise-colorfit-pulse-2-bluetooth-calling-smartwatch/p/itm29cf382bc5ac2"
-               class="btn-flipkart" target="_blank" rel="sponsored nofollow">
-                🛒 view on Flipkart
-            </a>
-        </div>
-        <!-- 6. Ambrane 20W 10000mAh power bank -->
-        <div class="product-card">
-            <div class="product-image">🔋</div>
-            <div class="product-title">Ambrane 20W 10000mAh</div>
-            <div class="fake-rating">★★★★☆</div>
-            <div class="product-price">₹1,199</div>
-            <span class="live-badge">live on Flipkart</span>
-            <a href="https://www.flipkart.com/ambrane-10000-mah-20w-fast-charging-power-bank/p/itmfd2f2e0e9b9ac"
-               class="btn-flipkart" target="_blank" rel="sponsored nofollow">
-                🛒 view on Flipkart
-            </a>
-        </div>
-        <!-- 7. Redmi A3 (forest green) -->
-        <div class="product-card">
-            <div class="product-image">📱</div>
-            <div class="product-title">Redmi A3 (forest)</div>
-            <div class="fake-rating">★★★½☆</div>
-            <div class="product-price">₹6,499</div>
-            <span class="live-badge">live on Flipkart</span>
-            <a href="https://www.flipkart.com/redmi-a3-forest-green-64-gb/p/itm4b3d4a62b7e58"
-               class="btn-flipkart" target="_blank" rel="sponsored nofollow">
-                🛒 view on Flipkart
-            </a>
-        </div>
-        <!-- 8. Fastrack Reflex Vox -->
-        <div class="product-card">
-            <div class="product-image">⌚</div>
-            <div class="product-title">Fastrack Reflex Vox</div>
-            <div class="fake-rating">★★★★☆</div>
-            <div class="product-price">₹1,995</div>
-            <span class="live-badge">live on Flipkart</span>
-            <a href="https://www.flipkart.com/fastrack-reflex-vox-bluetooth-calling-smartwatch/p/itm5b34ea1ac23fa"
-               class="btn-flipkart" target="_blank" rel="sponsored nofollow">
-                🛒 view on Flipkart
-            </a>
-        </div>
-        <!-- 9. ZEBRONICS Zeb-Yoga 101 speaker -->
-        <div class="product-card">
-            <div class="product-image">🔊</div>
-            <div class="product-title">ZEBRONICS Yoga 101</div>
-            <div class="fake-rating">★★★★☆</div>
-            <div class="product-price">₹799</div>
-            <span class="live-badge">live on Flipkart</span>
-            <a href="https://www.flipkart.com/zebronics-zeb-yoga-101-bluetooth-speaker/p/itm8e96b10153eb8"
-               class="btn-flipkart" target="_blank" rel="sponsored nofollow">
-                🛒 view on Flipkart
-            </a>
-        </div>
-        <!-- 10. AmazonBasics 24" suitcase -->
-        <div class="product-card">
-            <div class="product-image">🧳</div>
-            <div class="product-title">AmazonBasics 24" suitcase</div>
-            <div class="fake-rating">★★★½☆</div>
-            <div class="product-price">₹2,199</div>
-            <span class="live-badge">live on Flipkart</span>
-            <a href="https://www.flipkart.com/amazonbasics-24-soft-sided-check-in-luggage-bag/p/itm2c63eab24b431"
-               class="btn-flipkart" target="_blank" rel="sponsored nofollow">
-                🛒 view on Flipkart
-            </a>
-        </div>
-    </div>   <!-- end of 10 products -->
+            <!-- WOMEN's beauty & fashion (16) -->
+            <h2 class="section-title" style="margin-top:2rem;">💄 Women's beauty & fashion · 16 items</h2>
+            <div class="product-row">
+                <div class="cat-card" onclick="alert('💄 women product demo')"><div class="cat-img">💄</div><div class="cat-title">Lipstick</div><div class="cat-price">₹549</div></div>
+                <div class="cat-card" onclick="alert('💄 women product demo')"><div class="cat-img">👗</div><div class="cat-title">Dress</div><div class="cat-price">₹1,899</div></div>
+                <div class="cat-card" onclick="alert('💄 women product demo')"><div class="cat-img">🧴</div><div class="cat-title">Face cream</div><div class="cat-price">₹399</div></div>
+                <div class="cat-card" onclick="alert('💄 women product demo')"><div class="cat-img">👡</div><div class="cat-title">Heels</div><div class="cat-price">₹2,099</div></div>
+                <div class="cat-card" onclick="alert('💄 women product demo')"><div class="cat-img">🕶️</div><div class="cat-title">Sunglasses</div><div class="cat-price">₹1,299</div></div>
+                <div class="cat-card" onclick="alert('💄 women product demo')"><div class="cat-img">👛</div><div class="cat-title">Handbag</div><div class="cat-price">₹1,599</div></div>
+                <div class="cat-card" onclick="alert('💄 women product demo')"><div class="cat-img">🧥</div><div class="cat-title">Blazer</div><div class="cat-price">₹3,299</div></div>
+                <div class="cat-card" onclick="alert('💄 women product demo')"><div class="cat-img">👚</div><div class="cat-title">Top</div><div class="cat-price">₹699</div></div>
+            </div>
+            <div class="product-row" style="margin-top: -1rem;">
+                <div class="cat-card" onclick="alert('💄 women product demo')"><div class="cat-img">💍</div><div class="cat-title">Earrings</div><div class="cat-price">₹899</div></div>
+                <div class="cat-card" onclick="alert('💄 women product demo')"><div class="cat-img">🧴</div><div class="cat-title">Sunscreen</div><div class="cat-price">₹649</div></div>
+                <div class="cat-card" onclick="alert('💄 women product demo')"><div class="cat-img">👙</div><div class="cat-title">Swimsuit</div><div class="cat-price">₹1,299</div></div>
+                <div class="cat-card" onclick="alert('💄 women product demo')"><div class="cat-img">🧦</div><div class="cat-title">Stockings</div><div class="cat-price">₹299</div></div>
+                <div class="cat-card" onclick="alert('💄 women product demo')"><div class="cat-img">🧣</div><div class="cat-title">Scarf</div><div class="cat-price">₹599</div></div>
+                <div class="cat-card" onclick="alert('💄 women product demo')"><div class="cat-img">⌚</div><div class="cat-title">Fossil watch</div><div class="cat-price">₹8,999</div></div>
+                <div class="cat-card" onclick="alert('💄 women product demo')"><div class="cat-img">💎</div><div class="cat-title">Bracelet</div><div class="cat-price">₹1,199</div></div>
+                <div class="cat-card" onclick="alert('💄 women product demo')"><div class="cat-img">👘</div><div class="cat-title">Kurta</div><div class="cat-price">₹1,799</div></div>
+            </div>
 
-    <!-- disclosure & footer -->
-    <hr />
-    <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 25px;">
-        <div class="flipkart-disclosure">
-            <span>🔗</span>
-            <span><strong>Every link goes to a real, in‑stock Flipkart product</strong> — first card is your GUESS watch.</span>
+            <!-- KIDS section (15 items) -->
+            <h2 class="section-title" style="margin-top:2rem;">🧸 Kids · 15 items</h2>
+            <div class="product-row">
+                <div class="cat-card" onclick="alert('🧸 kids product demo')"><div class="cat-img">🧸</div><div class="cat-title">Teddy bear</div><div class="cat-price">₹599</div></div>
+                <div class="cat-card" onclick="alert('🧸 kids product demo')"><div class="cat-img">👕</div><div class="cat-title">T-shirt set</div><div class="cat-price">₹899</div></div>
+                <div class="cat-card" onclick="alert('🧸 kids product demo')"><div class="cat-img">👖</div><div class="cat-title">Jeans</div><div class="cat-price">₹999</div></div>
+                <div class="cat-card" onclick="alert('🧸 kids product demo')"><div class="cat-img">🧸</div><div class="cat-title">Toy car</div><div class="cat-price">₹349</div></div>
+                <div class="cat-card" onclick="alert('🧸 kids product demo')"><div class="cat-img">📚</div><div class="cat-title">Story books</div><div class="cat-price">₹399</div></div>
+                <div class="cat-card" onclick="alert('🧸 kids product demo')"><div class="cat-img">🧢</div><div class="cat-title">Cap</div><div class="cat-price">₹299</div></div>
+                <div class="cat-card" onclick="alert('🧸 kids product demo')"><div class="cat-img">👟</div><div class="cat-title">Sneakers</div><div class="cat-price">₹1,199</div></div>
+                <div class="cat-card" onclick="alert('🧸 kids product demo')"><div class="cat-img">🧦</div><div class="cat-title">Socks pack</div><div class="cat-price">₹199</div></div>
+            </div>
+            <div class="product-row" style="margin-top: -1rem;">
+                <div class="cat-card" onclick="alert('🧸 kids product demo')"><div class="cat-img">🚂</div><div class="cat-title">Toy train</div><div class="cat-price">₹799</div></div>
+                <div class="cat-card" onclick="alert('🧸 kids product demo')"><div class="cat-img">🧴</div><div class="cat-title">Baby lotion</div><div class="cat-price">₹299</div></div>
+                <div class="cat-card" onclick="alert('🧸 kids product demo')"><div class="cat-img">🍼</div><div class="cat-title">Feeding set</div><div class="cat-price">₹549</div></div>
+                <div class="cat-card" onclick="alert('🧸 kids product demo')"><div class="cat-img">🧩</div><div class="cat-title">Puzzle</div><div class="cat-price">₹399</div></div>
+                <div class="cat-card" onclick="alert('🧸 kids product demo')"><div class="cat-img">📓</div><div class="cat-title">Drawing kit</div><div class="cat-price">₹649</div></div>
+                <div class="cat-card" onclick="alert('🧸 kids product demo')"><div class="cat-img">🧸</div><div class="cat-title">Doll</div><div class="cat-price">₹449</div></div>
+                <div class="cat-card" onclick="alert('🧸 kids product demo')"><div class="cat-img">🎒</div><div class="cat-title">Backpack</div><div class="cat-price">₹999</div></div>
+                <!-- 15th item already included, total 8+7 =15 -->
+            </div>
+            <p style="color:#1f4172;">* Each card shows demo popup — similar detailed page would open (like GUESS watch above).</p>
+        </div>
+
+        <!-- footer note about buy now and flipkart link -->
+        <hr>
+        <div style="display: flex; justify-content: space-between; flex-wrap: wrap; color: #3f5f88; padding: 1rem 0;">
+            <span>⭐ detailed view with 5 thumbnails, price, rating, reviews, description</span>
+            <span><strong>BUY NOW</strong> demo → uses real GUESS watch link 🔗</span>
         </div>
     </div>
 
-    <div style="display: flex; justify-content: center; gap: 40px; margin: 1.5rem 0 2rem; flex-wrap: wrap;">
-        <div class="demo-note">✅ "Login with Google" & profile are UI preview (static)</div>
-        <div class="demo-note">🛍️ Zyna's Hub – 10 featured Flipkart items</div>
-    </div>
-
-    <!-- small note about affiliate links / demo -->
-    <p style="text-align: center; font-size: 0.8rem; color: #5c6f92; max-width: 850px; margin: 0 auto;">
-        ⚡ Demonstration page — Zyna's Hub concept. All Flipkart links are real and clean.
-        The first product (GUESS watch) uses the exact URL you shared. You may append your own affiliate ID (e.g. <code>&affid=partner123</code>) to the URLs.
-    </p>
-</div>
+    <script>
+        // simple thumbnail interactivity (just for demo)
+        function setMainImage(emoji) {
+            document.getElementById('mainImage').innerHTML = `<span style="font-size:10rem;">${emoji}</span>`;
+        }
+        // attach click to thumbnails (already inline)
+    </script>
 </body>
 </html>
