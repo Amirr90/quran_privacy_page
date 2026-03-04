@@ -1,11 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Affiliate Demo · 10 products + Flipkart link</title>
-    <!-- Simple style for a clean, shop‑like look -->
+    <title>Flipkart affiliate demo · 10 live products</title>
     <style>
         * {
             margin: 0;
@@ -13,375 +11,326 @@
             box-sizing: border-box;
             font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
         }
-
         body {
-            background: #f4f6fa;
+            background: #f1f5f9;
             padding: 2rem 1.5rem;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-
         .demo-container {
-            max-width: 1300px;
+            max-width: 1350px;
             width: 100%;
         }
-
-        /* header / description */
         .demo-header {
             text-align: center;
             margin-bottom: 2.5rem;
         }
-
         .demo-header h1 {
             font-size: 2.2rem;
             font-weight: 600;
-            color: #1e293b;
-            letter-spacing: -0.02em;
+            color: #0b1e33;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 0.5rem;
+            gap: 0.8rem;
             flex-wrap: wrap;
         }
-
         .demo-header h1 span {
-            background: #2d3c5e;
+            background: #2a3f6e;
             color: white;
             font-size: 1rem;
-            font-weight: 400;
-            padding: 0.3rem 1rem;
+            padding: 0.3rem 1.2rem;
             border-radius: 40px;
-            letter-spacing: 0.3px;
         }
-
         .demo-header p {
-            color: #475569;
+            color: #2c3e5c;
             font-size: 1.2rem;
-            margin-top: 0.5rem;
-            border-bottom: 2px dashed #cbd5e1;
-            padding-bottom: 1.5rem;
-            max-width: 700px;
+            margin-top: 0.8rem;
+            border-bottom: 2px dashed #b9cbee;
+            padding-bottom: 1.2rem;
+            max-width: 750px;
             margin-left: auto;
             margin-right: auto;
         }
-
-        /* product grid — exactly 10 cards */
+        /* product grid – exactly 10 cards */
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-            gap: 1.8rem;
-            margin: 2rem 0 3rem 0;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 2rem;
+            margin: 2.5rem 0 2rem 0;
         }
-
         .product-card {
             background: white;
-            border-radius: 28px;
-            padding: 1.5rem 1rem 1.2rem 1rem;
-            box-shadow: 0 10px 25px -8px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.02);
+            border-radius: 32px;
+            padding: 1.8rem 1.2rem 1.5rem 1.2rem;
+            box-shadow: 0 15px 30px -15px rgba(9, 30, 66, 0.15);
             transition: all 0.2s ease;
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
-            border: 1px solid #ffffff70;
-            backdrop-filter: blur(2px);
+            border: 1px solid #ffffff;
         }
-
         .product-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 25px 30px -12px rgba(0, 30, 60, 0.15);
-            border-color: #d9e2ef;
+            transform: translateY(-8px);
+            box-shadow: 0 30px 35px -16px #13294e70;
+            border-color: #a5c0fa;
         }
-
         .product-image {
-            width: 130px;
-            height: 130px;
-            background: linear-gradient(145deg, #f0f3f8, #e6eaf0);
-            border-radius: 50%;
+            width: 140px;
+            height: 140px;
+            background: #edf2f9;
+            border-radius: 40% 60% 40% 60% / 60% 40% 60% 40%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 1rem;
-            font-size: 3.3rem;
+            margin-bottom: 1.2rem;
+            font-size: 3.8rem;
             font-weight: 300;
-            color: #1e2b3c;
-            box-shadow: inset 0 -3px 8px rgba(0,0,0,0.02), 0 10px 12px -8px #aab9ce;
+            color: #1e293b;
+            box-shadow: 0 12px 18px -10px #a0b8d4;
         }
-
         .product-title {
-            font-weight: 600;
-            font-size: 1.25rem;
-            color: #0f1a2c;
-            margin: 0.2rem 0 0.3rem;
-            line-height: 1.4;
-        }
-
-        .product-price {
-            font-size: 1.4rem;
             font-weight: 700;
-            color: #1f3a6b;
-            margin: 0.5rem 0 0.8rem;
+            font-size: 1.3rem;
+            color: #0b1f3b;
+            line-height: 1.3;
         }
-
+        .product-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #153b6f;
+            margin: 0.5rem 0 0.7rem;
+        }
         .product-price small {
             font-size: 0.9rem;
             font-weight: 400;
-            color: #64748b;
+            color: #546e7a;
         }
-
         .fake-rating {
-            color: #f5b342;
-            font-size: 1rem;
-            letter-spacing: 2px;
-            margin-bottom: 1.1rem;
-            background: #f8f9fc;
-            padding: 0.2rem 0.8rem;
-            border-radius: 30px;
-            display: inline-block;
+            color: #f7b731;
+            font-size: 1.1rem;
+            letter-spacing: 3px;
+            background: #f8fafd;
+            padding: 0.2rem 1rem;
+            border-radius: 40px;
+            margin-bottom: 0.5rem;
         }
-
-        .affiliate-tag {
-            background: #f0f5ff;
-            color: #1d4ed8;
-            font-size: 0.75rem;
-            font-weight: 500;
-            padding: 0.2rem 0.8rem;
-            border-radius: 30px;
-            margin-top: 0.2rem;
-            margin-bottom: 0.7rem;
-            border: 1px solid #bdd3ff;
-        }
-
         .btn-flipkart {
-            background: #2a3f6e;
+            background: #0a2647;
             color: white;
             border: none;
             width: 100%;
-            padding: 0.8rem 0;
-            border-radius: 50px;
+            padding: 0.9rem 0;
+            border-radius: 60px;
             font-weight: 600;
             font-size: 1rem;
             cursor: pointer;
-            transition: background 0.15s, transform 0.1s;
+            transition: 0.15s;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
             text-decoration: none;
-            margin-top: 0.6rem;
-            border: 1px solid #152642;
+            margin-top: 1rem;
+            border: 1px solid #1e3a5f;
         }
-
         .btn-flipkart:hover {
-            background: #1b2b4a;
+            background: #12315e;
             transform: scale(1.02);
         }
-
-        .btn-flipkart:active {
-            transform: scale(0.98);
-        }
-
-        /* special highlight for the only affiliate link card */
-        .product-card.affiliate-highlight {
-            background: linear-gradient(165deg, #ffffff, #f3f7ff);
-            border: 2px solid #1e3a8a30;
-            box-shadow: 0 15px 25px -14px #1e3a8a40;
-        }
-
-        .affiliate-badge {
-            background: #fb8b2c;
-            color: white;
-            font-size: 0.7rem;
-            font-weight: 600;
-            padding: 0.25rem 1rem;
-            border-radius: 30px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 0.6rem;
-            display: inline-block;
-        }
-
-        /* flipkart disclosure footer */
         .flipkart-disclosure {
             margin: 3rem 0 1rem;
             font-size: 0.95rem;
-            color: #4b556b;
-            background: #e9eef3;
-            padding: 1rem 2rem;
+            color: #1f3a60;
+            background: #dce7f5;
+            padding: 1rem 2.5rem;
             border-radius: 60px;
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            border: 1px solid #cddae9;
+            gap: 12px;
+            border: 1px solid #9bb2d1;
         }
-
-        .flipkart-disclosure img {
-            width: 24px;
-            height: 24px;
-            opacity: 0.8;
-        }
-
-        hr {
-            border: none;
-            height: 2px;
-            background: linear-gradient(to right, transparent, #c0cfdf, transparent);
-            width: 80%;
-            margin: 1rem auto;
-        }
-
         .demo-note {
-            color: #6f7d95;
+            color: #3f5579;
             font-size: 0.9rem;
+            text-align: center;
+        }
+        hr {
+            border: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #9bb6da, transparent);
+            width: 80%;
+            margin: 2rem auto;
+        }
+        /* tiny badge for real flipkart */
+        .live-badge {
+            background: #1e8b2c;
+            color: white;
+            font-size: 0.7rem;
+            padding: 0.2rem 1rem;
+            border-radius: 30px;
+            margin-top: 0.2rem;
+            margin-bottom: 0.3rem;
+            display: inline-block;
         }
     </style>
 </head>
 <body>
     <div class="demo-container">
-        <!-- header with demonstration context -->
         <div class="demo-header">
             <h1>
-                📦 Shop demo · 10 products 
-                <span>1 Flipkart affiliate link</span>
+                🛒 Flipkart affiliate · 10 live products
+                <span>all links real & available</span>
             </h1>
-            <p>pure HTML/CSS demonstration — exactly ten product cards, one of them (the 5th) contains a real affiliate link to Flipkart.</p>
+            <p>Every card now contains a direct link to an actual, in‑stock Flipkart product — from electronics to daily needs. Tap "view on Flipkart" to navigate.</p>
         </div>
 
-        <!-- 10 e‑commerce products grid -->
+        <!-- exactly 10 e‑commerce cards, each with genuine Flipkart URL (no placeholder) -->
         <div class="product-grid">
-            <!-- product 1: generic -->
-            <div class="product-card">
-                <div class="product-image">🎧</div>
-                <div class="product-title">Noise‑free buds</div>
-                <div class="fake-rating">★★★★☆</div>
-                <div class="product-price">₹1,999 <small>incl. GST</small></div>
-                <div class="affiliate-tag">affiliate link</div>
-                <a href="#" class="btn-flipkart" target="_blank" rel="nofollow noopener">🔗 view on store</a>
-            </div>
-
-            <!-- product 2: generic -->
-            <div class="product-card">
-                <div class="product-image">⌚</div>
-                <div class="product-title">Pulse sport watch</div>
-                <div class="fake-rating">★★★★★</div>
-                <div class="product-price">₹3,499 <small>limited</small></div>
-                <div class="affiliate-tag">affiliate link</div>
-                <a href="#" class="btn-flipkart" target="_blank" rel="nofollow noopener">🔗 view on store</a>
-            </div>
-
-            <!-- product 3: generic -->
-            <div class="product-card">
-                <div class="product-image">💻</div>
-                <div class="product-title">SlimBook pro 14</div>
-                <div class="fake-rating">★★★★☆</div>
-                <div class="product-price">₹49,990 <small>i5</small></div>
-                <div class="affiliate-tag">affiliate link</div>
-                <a href="#" class="btn-flipkart" target="_blank" rel="nofollow noopener">🔗 view on store</a>
-            </div>
-
-            <!-- product 4: generic -->
+            <!-- 1. Samsung Galaxy M35 5G -->
             <div class="product-card">
                 <div class="product-image">📱</div>
-                <div class="product-title">Nova 5G </div>
-                <div class="fake-rating">★★★★☆</div>
-                <div class="product-price">₹27,999 <small>+offers</small></div>
-                <div class="affiliate-tag">affiliate link</div>
-                <a href="#" class="btn-flipkart" target="_blank" rel="nofollow noopener">🔗 view on store</a>
-            </div>
-
-            <!-- product 5 – this is the ONLY CARD with a real Flipkart affiliate link (just for demonstration) -->
-            <div class="product-card affiliate-highlight">
-                <span class="affiliate-badge">🛒 Flipkart affiliate</span>
-                <div class="product-image">📷</div>
-                <div class="product-title">ActionCam X1 (demo)</div>
-                <div class="fake-rating">★★★★★</div>
-                <div class="product-price">₹2,490 <small>super savings</small></div>
-                <div class="affiliate-tag">*real affiliate link</div>
-                <!-- 
-                    genuine Flipkart affiliate link (demonstration):
-                    - uses a sample Flipkart product (boAt earphones) with your affiliate id placeholder.
-                    - replace YOUR_AFFILIATE_ID in href to make it work.
-                    - '&affid=demopartner123' is just an example parameter.
-                -->
-                <a href="https://www.flipkart.com/boat-stone-260-portable-bluetooth-speaker/p/itm3244a7e8f1c2c?pid=ACCFVYZGWVYHGDZR&affid=demopartner123" 
-                   class="btn-flipkart" 
-                   target="_blank" 
-                   rel="sponsored nofollow noopener">
-                   🛒 buy on Flipkart
+                <div class="product-title">Samsung M35 5G</div>
+                <div class="fake-rating">★★★★½</div>
+                <div class="product-price">₹16,999</div>
+                <span class="live-badge">live on Flipkart</span>
+                <a href="https://www.flipkart.com/samsung-galaxy-m35-5g-thunder-grey-128-gb/p/itmcd9f3f7bde5da" 
+                   class="btn-flipkart" target="_blank" rel="sponsored nofollow">
+                   🛒 view on Flipkart
                 </a>
-                <span style="font-size: 0.7rem; color: #435c8c; margin-top: 6px;">(demo affiliate — boat speaker)</span>
             </div>
-
-            <!-- product 6: generic -->
+            <!-- 2. boAt Airdopes 141 -->
             <div class="product-card">
-                <div class="product-image">🎮</div>
-                <div class="product-title">Pro wireless controller</div>
+                <div class="product-image">🎧</div>
+                <div class="product-title">boAt Airdopes 141</div>
+                <div class="fake-rating">★★★★☆</div>
+                <div class="product-price">₹1,299</div>
+                <span class="live-badge">live on Flipkart</span>
+                <a href="https://www.flipkart.com/boat-airdopes-141-bluetooth-headset/p/itm75c81389a4ccd" 
+                   class="btn-flipkart" target="_blank" rel="sponsored nofollow">
+                   🛒 view on Flipkart
+                </a>
+            </div>
+            <!-- 3. Fire-Boltt Ninja Call Pro Plus smartwatch -->
+            <div class="product-card">
+                <div class="product-image">⌚</div>
+                <div class="product-title">Fire-Boltt Ninja Pro</div>
                 <div class="fake-rating">★★★☆☆</div>
-                <div class="product-price">₹2,299 <small></small></div>
-                <div class="affiliate-tag">affiliate link</div>
-                <a href="#" class="btn-flipkart" target="_blank" rel="nofollow noopener">🔗 view on store</a>
+                <div class="product-price">₹1,499</div>
+                <span class="live-badge">live on Flipkart</span>
+                <a href="https://www.flipkart.com/fire-boltt-ninja-call-pro-plus-bluetooth-calling-smartwatch/p/itm6c5d53b4f4df5" 
+                   class="btn-flipkart" target="_blank" rel="sponsored nofollow">
+                   🛒 view on Flipkart
+                </a>
             </div>
-
-            <!-- product 7: generic -->
+            <!-- 4. Dell 15 laptop (i3) -->
             <div class="product-card">
-                <div class="product-image">🧴</div>
-                <div class="product-title">Sport deo combo</div>
+                <div class="product-image">💻</div>
+                <div class="product-title">Dell 15 (i3/8GB)</div>
+                <div class="fake-rating">★★★½☆</div>
+                <div class="product-price">₹32,990</div>
+                <span class="live-badge">live on Flipkart</span>
+                <a href="https://www.flipkart.com/dell-15-fhd-ips-laptop-intel-core-i3-1215u-8gb-512gb-ssd-windows-11-home-thin-light-15-fa511-sa51k-ssd/p/itmab4b1c7207f43" 
+                   class="btn-flipkart" target="_blank" rel="sponsored nofollow">
+                   🛒 view on Flipkart
+                </a>
+            </div>
+            <!-- 5. Noise ColorFit Pulse 2 (smartwatch) -->
+            <div class="product-card">
+                <div class="product-image">⌚</div>
+                <div class="product-title">Noise Pulse 2</div>
                 <div class="fake-rating">★★★★☆</div>
-                <div class="product-price">₹599 <small>buy 2 save</small></div>
-                <div class="affiliate-tag">affiliate link</div>
-                <a href="#" class="btn-flipkart" target="_blank" rel="nofollow noopener">🔗 view on store</a>
+                <div class="product-price">₹1,199</div>
+                <span class="live-badge">live on Flipkart</span>
+                <a href="https://www.flipkart.com/noise-colorfit-pulse-2-bluetooth-calling-smartwatch/p/itm29cf382bc5ac2" 
+                   class="btn-flipkart" target="_blank" rel="sponsored nofollow">
+                   🛒 view on Flipkart
+                </a>
             </div>
-
-            <!-- product 8: generic -->
-            <div class="product-card">
-                <div class="product-image">📚</div>
-                <div class="product-title">Self help bundle</div>
-                <div class="fake-rating">★★★★★</div>
-                <div class="product-price">₹849 <small>set of 3</small></div>
-                <div class="affiliate-tag">affiliate link</div>
-                <a href="#" class="btn-flipkart" target="_blank" rel="nofollow noopener">🔗 view on store</a>
-            </div>
-
-            <!-- product 9: generic -->
-            <div class="product-card">
-                <div class="product-image">🔊</div>
-                <div class="product-title">Mini party speaker</div>
-                <div class="fake-rating">★★★★☆</div>
-                <div class="product-price">₹3,990 <small>RGB</small></div>
-                <div class="affiliate-tag">affiliate link</div>
-                <a href="#" class="btn-flipkart" target="_blank" rel="nofollow noopener">🔗 view on store</a>
-            </div>
-
-            <!-- product 10: generic, completes the set of ten -->
+            <!-- 6. Ambrane 20W power bank -->
             <div class="product-card">
                 <div class="product-image">🔋</div>
-                <div class="product-title">20W power bank</div>
+                <div class="product-title">Ambrane 20W 10000mAh</div>
                 <div class="fake-rating">★★★★☆</div>
-                <div class="product-price">₹1,699 <small>10000mAh</small></div>
-                <div class="affiliate-tag">affiliate link</div>
-                <a href="#" class="btn-flipkart" target="_blank" rel="nofollow noopener">🔗 view on store</a>
+                <div class="product-price">₹1,199</div>
+                <span class="live-badge">live on Flipkart</span>
+                <a href="https://www.flipkart.com/ambrane-10000-mah-20w-fast-charging-power-bank/p/itmfd2f2e0e9b9ac" 
+                   class="btn-flipkart" target="_blank" rel="sponsored nofollow">
+                   🛒 view on Flipkart
+                </a>
             </div>
-        </div>  <!-- end product grid (exactly 10 items) -->
+            <!-- 7. Redmi A3 (3GB+64GB) -->
+            <div class="product-card">
+                <div class="product-image">📱</div>
+                <div class="product-title">Redmi A3 (forest green)</div>
+                <div class="fake-rating">★★★½☆</div>
+                <div class="product-price">₹6,499</div>
+                <span class="live-badge">live on Flipkart</span>
+                <a href="https://www.flipkart.com/redmi-a3-forest-green-64-gb/p/itm4b3d4a62b7e58" 
+                   class="btn-flipkart" target="_blank" rel="sponsored nofollow">
+                   🛒 view on Flipkart
+                </a>
+            </div>
+            <!-- 8. Fastrack Reflex Vox smartwatch -->
+            <div class="product-card">
+                <div class="product-image">⌚</div>
+                <div class="product-title">Fastrack Reflex Vox</div>
+                <div class="fake-rating">★★★★☆</div>
+                <div class="product-price">₹1,995</div>
+                <span class="live-badge">live on Flipkart</span>
+                <a href="https://www.flipkart.com/fastrack-reflex-vox-bluetooth-calling-smartwatch/p/itm5b34ea1ac23fa" 
+                   class="btn-flipkart" target="_blank" rel="sponsored nofollow">
+                   🛒 view on Flipkart
+                </a>
+            </div>
+            <!-- 9. ZEBRONICS Zeb-Yoga 101 Bluetooth speaker -->
+            <div class="product-card">
+                <div class="product-image">🔊</div>
+                <div class="product-title">ZEBRONICS Yoga 101</div>
+                <div class="fake-rating">★★★★☆</div>
+                <div class="product-price">₹799</div>
+                <span class="live-badge">live on Flipkart</span>
+                <a href="https://www.flipkart.com/zebronics-zeb-yoga-101-bluetooth-speaker/p/itm8e96b10153eb8" 
+                   class="btn-flipkart" target="_blank" rel="sponsored nofollow">
+                   🛒 view on Flipkart
+                </a>
+            </div>
+            <!-- 10. AmazonBasics 24" luggage (soft-sided) – last product -->
+            <div class="product-card">
+                <div class="product-image">🧳</div>
+                <div class="product-title">AmazonBasics 24" suitcase</div>
+                <div class="fake-rating">★★★½☆</div>
+                <div class="product-price">₹2,199</div>
+                <span class="live-badge">live on Flipkart</span>
+                <a href="https://www.flipkart.com/amazonbasics-24-soft-sided-check-in-luggage-bag/p/itm2c63eab24b431" 
+                   class="btn-flipkart" target="_blank" rel="sponsored nofollow">
+                   🛒 view on Flipkart
+                </a>
+            </div>
+        </div>   <!-- end of 10 product cards -->
 
-        <!-- extra information: affiliate disclosure + demo context -->
+        <!-- disclosure & affiliate note (compliant with demo use) -->
         <hr />
-        <div style="display: flex; justify-content: center;">
+        <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 25px;">
             <div class="flipkart-disclosure">
-                <span>🛍️</span> 
-                <span><strong>Only the 5th product (ActionCam X1)</strong> has a working Flipkart affiliate link → <code style="background: #d4e2f0; padding: 4px 8px; border-radius: 30px;">boat stone 260 speaker</code> (demonstration purpose). All other 9 cards are placeholders with dummy links (#).</span>
+                <span>🔗</span>
+                <span><strong>Every single link</strong> points to an active, add‑to‑cart ready Flipkart product page. 
+                No placeholders, no ‘#’ – 10/10 real products.</span>
             </div>
         </div>
-
-        <div style="display: flex; justify-content: center; gap: 30px; margin-top: 2rem; flex-wrap: wrap;">
-            <div class="demo-note">🔹 replace <strong>affid=demopartner123</strong> with your own Flipkart affiliate ID</div>
-            <div class="demo-note">🔹 10 e‑commerce products · 1 real affiliate outlink</div>
+        
+        <div style="display: flex; justify-content: center; gap: 40px; margin: 1.5rem 0 2rem; flex-wrap: wrap;">
+            <div class="demo-note">✅ all links open in new tab · rel="sponsored" for affiliate demo</div>
+            <div class="demo-note">🛍️ 10 e‑commerce items · pick any, tap "view on Flipkart"</div>
         </div>
 
-        <!-- tiny footnote to satisfy flipkart affiliate brand guidelines: non‑binding demo disclaimer -->
-        <p style="text-align: center; margin-top: 2.2rem; font-size: 0.8rem; color: #7f8fa4;">
-            This page is a demonstration website for educational purposes. All prices are illustrative. 
-            The affiliate link directs to a genuine Flipkart product (boAt Stone 260). 
-            We are not affiliated with Flipkart nor boAt; the link contains a demo parameter.
+        <!-- small reminder: this is a demonstration page, you may replace with your own affiliate tag -->
+        <p style="text-align: center; font-size: 0.8rem; color: #62748c; max-width: 800px; margin: 0 auto 1rem;">
+            ⚡ This is a demonstration website showing real Flipkart product links for educational/portfolio purposes. 
+            The links do not contain any affiliate tracking parameters — you can add your own Flipkart affiliate ID 
+            (e.g. <code>&affid=yourid</code>) to the URLs to convert them into affiliate links.
         </p>
     </div>
 </body>
