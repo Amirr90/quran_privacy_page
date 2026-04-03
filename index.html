@@ -1,1036 +1,1304 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Quran App</title>
-    <meta name="description" content="Privacy Policy for Quran App - Learn how we protect your data and privacy">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
-        rel="stylesheet">
-
-    <style>
-        /* Material Design 3 Color Tokens */
-        :root {
-            --md-sys-color-primary: #006C4C;
-            --md-sys-color-on-primary: #FFFFFF;
-            --md-sys-color-primary-container: #89F8C7;
-            --md-sys-color-on-primary-container: #002114;
-            --md-sys-color-secondary: #4D6357;
-            --md-sys-color-on-secondary: #FFFFFF;
-            --md-sys-color-secondary-container: #CFE9D9;
-            --md-sys-color-on-secondary-container: #0A1F16;
-            --md-sys-color-tertiary: #3D6373;
-            --md-sys-color-on-tertiary: #FFFFFF;
-            --md-sys-color-tertiary-container: #C1E8FB;
-            --md-sys-color-on-tertiary-container: #001F29;
-            --md-sys-color-surface: #FBFDF9;
-            --md-sys-color-on-surface: #191C1A;
-            --md-sys-color-surface-variant: #DBE5DD;
-            --md-sys-color-on-surface-variant: #404943;
-            --md-sys-color-background: #F6FAF5;
-            --md-sys-color-on-background: #191C1A;
-            --md-sys-color-outline: #707973;
-            --md-sys-color-outline-variant: #BFC9C2;
-            --md-sys-elevation-1: 0 1px 2px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
-            --md-sys-elevation-2: 0 2px 4px rgba(0, 0, 0, 0.05), 0 3px 6px rgba(0, 0, 0, 0.1);
-            --md-sys-elevation-3: 0 4px 8px rgba(0, 0, 0, 0.05), 0 6px 12px rgba(0, 0, 0, 0.1);
-            --md-sys-typescale-display-medium: 45px;
-            --md-sys-typescale-headline-large: 32px;
-            --md-sys-typescale-headline-small: 24px;
-            --md-sys-typescale-title-large: 22px;
-            --md-sys-typescale-title-medium: 16px;
-            --md-sys-typescale-body-large: 16px;
-            --md-sys-typescale-body-medium: 14px;
-            --spacing-xs: 4px;
-            --spacing-sm: 8px;
-            --spacing-md: 16px;
-            --spacing-lg: 24px;
-            --spacing-xl: 32px;
-            --spacing-2xl: 48px;
-            --spacing-3xl: 64px;
-            --radius-sm: 8px;
-            --radius-md: 12px;
-            --radius-lg: 16px;
-            --radius-xl: 24px;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            font-size: var(--md-sys-typescale-body-large);
-            line-height: 1.6;
-            color: var(--md-sys-color-on-background);
-            background-color: var(--md-sys-color-background);
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 var(--spacing-md);
-        }
-
-        @media (min-width: 768px) {
-            .container {
-                padding: 0 var(--spacing-xl);
-            }
-        }
-
-        .app-bar {
-            background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, #008060 100%);
-            color: var(--md-sys-color-on-primary);
-            padding: var(--spacing-md) 0;
-            box-shadow: var(--md-sys-elevation-2);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            backdrop-filter: blur(10px);
-        }
-
-        .app-bar-content {
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-md);
-        }
-
-        .app-icon {
-            font-size: 32px;
-            animation: fadeInScale 0.5s ease-out;
-        }
-
-        .app-title {
-            font-size: var(--md-sys-typescale-title-large);
-            font-weight: 500;
-            letter-spacing: 0.5px;
-        }
-
-        .main-content {
-            padding: var(--spacing-2xl) 0;
-            min-height: calc(100vh - 200px);
-        }
-
-        .hero-section {
-            text-align: center;
-            margin-bottom: var(--spacing-2xl);
-            animation: fadeInUp 0.6s ease-out;
-        }
-
-        .hero-icon {
-            font-size: 64px;
-            color: var(--md-sys-color-primary);
-            margin-bottom: var(--spacing-md);
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        .page-title {
-            font-size: var(--md-sys-typescale-display-medium);
-            font-weight: 400;
-            color: var(--md-sys-color-on-background);
-            margin-bottom: var(--spacing-sm);
-            letter-spacing: -0.5px;
-        }
-
-        .last-updated {
-            font-size: var(--md-sys-typescale-body-medium);
-            color: var(--md-sys-color-on-surface-variant);
-            font-weight: 300;
-        }
-
-        .content-card {
-            background: var(--md-sys-color-surface);
-            border-radius: var(--radius-xl);
-            padding: var(--spacing-xl);
-            box-shadow: var(--md-sys-elevation-1);
-            margin-bottom: var(--spacing-lg);
-            animation: fadeInUp 0.7s ease-out;
-            transition: box-shadow 0.3s ease;
-        }
-
-        .content-card:hover {
-            box-shadow: var(--md-sys-elevation-2);
-        }
-
-        @media (min-width: 768px) {
-            .content-card {
-                padding: var(--spacing-2xl);
-            }
-        }
-
-        .policy-section {
-            margin-bottom: var(--spacing-2xl);
-            padding-bottom: var(--spacing-xl);
-            border-bottom: 1px solid var(--md-sys-color-outline-variant);
-        }
-
-        .policy-section:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-            border-bottom: none;
-        }
-
-        .section-header {
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-md);
-            margin-bottom: var(--spacing-lg);
-        }
-
-        .section-icon {
-            font-size: 32px;
-            color: var(--md-sys-color-primary);
-            transition: transform 0.3s ease;
-        }
-
-        .policy-section:hover .section-icon {
-            transform: scale(1.1);
-        }
-
-        .section-header h2 {
-            font-size: var(--md-sys-typescale-headline-small);
-            font-weight: 500;
-            color: var(--md-sys-color-on-surface);
-            letter-spacing: 0.25px;
-        }
-
-        .policy-section p {
-            margin-bottom: var(--spacing-md);
-            color: var(--md-sys-color-on-surface-variant);
-            line-height: 1.7;
-        }
-
-        .subsection {
-            margin-top: var(--spacing-lg);
-            padding-left: var(--spacing-lg);
-            border-left: 3px solid var(--md-sys-color-primary-container);
-        }
-
-        .subsection h3 {
-            font-size: var(--md-sys-typescale-title-medium);
-            font-weight: 500;
-            color: var(--md-sys-color-on-surface);
-            margin-bottom: var(--spacing-md);
-        }
-
-        .info-list {
-            list-style: none;
-            margin: var(--spacing-md) 0;
-        }
-
-        .info-list li {
-            display: flex;
-            align-items: flex-start;
-            gap: var(--spacing-md);
-            margin-bottom: var(--spacing-md);
-            padding: var(--spacing-md);
-            border-radius: var(--radius-md);
-            transition: all 0.3s ease;
-        }
-
-        .info-list li:hover {
-            background-color: var(--md-sys-color-primary-container);
-            transform: translateX(8px);
-        }
-
-        .list-icon {
-            font-size: 24px;
-            color: var(--md-sys-color-primary);
-            flex-shrink: 0;
-            margin-top: 2px;
-        }
-
-        .info-list li span:last-child {
-            flex: 1;
-            color: var(--md-sys-color-on-surface-variant);
-        }
-
-        .highlight-box {
-            background: linear-gradient(135deg, var(--md-sys-color-primary-container) 0%, var(--md-sys-color-secondary-container) 100%);
-            border-left: 4px solid var(--md-sys-color-primary);
-            border-radius: var(--radius-md);
-            padding: var(--spacing-lg);
-            margin: var(--spacing-lg) 0;
-            display: flex;
-            gap: var(--spacing-md);
-            align-items: flex-start;
-            animation: slideInLeft 0.5s ease-out;
-        }
-
-        .highlight-box .material-symbols-outlined {
-            font-size: 32px;
-            color: var(--md-sys-color-primary);
-            flex-shrink: 0;
-        }
-
-        .highlight-box p {
-            margin: 0;
-            color: var(--md-sys-color-on-primary-container);
-        }
-
-        .rights-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--spacing-lg);
-            margin-top: var(--spacing-lg);
-        }
-
-        .right-card {
-            background: linear-gradient(135deg, var(--md-sys-color-surface) 0%, var(--md-sys-color-surface-variant) 100%);
-            border-radius: var(--radius-lg);
-            padding: var(--spacing-lg);
-            text-align: center;
-            box-shadow: var(--md-sys-elevation-1);
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .right-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--md-sys-elevation-3);
-        }
-
-        .right-card .material-symbols-outlined {
-            font-size: 48px;
-            color: var(--md-sys-color-primary);
-            margin-bottom: var(--spacing-md);
-            transition: transform 0.3s ease;
-        }
-
-        .right-card:hover .material-symbols-outlined {
-            transform: rotate(360deg);
-        }
-
-        .right-card h3 {
-            font-size: var(--md-sys-typescale-title-medium);
-            font-weight: 500;
-            color: var(--md-sys-color-on-surface);
-            margin-bottom: var(--spacing-sm);
-        }
-
-        .right-card p {
-            font-size: var(--md-sys-typescale-body-medium);
-            color: var(--md-sys-color-on-surface-variant);
-            margin: 0;
-        }
-
-        .contact-box {
-            background: var(--md-sys-color-surface-variant);
-            border-radius: var(--radius-lg);
-            padding: var(--spacing-lg);
-            margin-top: var(--spacing-lg);
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: var(--spacing-md);
-            padding: var(--spacing-md);
-            border-radius: var(--radius-md);
-            transition: background-color 0.3s ease;
-        }
-
-        .contact-item:hover {
-            background-color: var(--md-sys-color-surface);
-        }
-
-        .contact-item .material-symbols-outlined {
-            font-size: 32px;
-            color: var(--md-sys-color-primary);
-            flex-shrink: 0;
-        }
-
-        .contact-item strong {
-            display: block;
-            font-size: var(--md-sys-typescale-title-medium);
-            color: var(--md-sys-color-on-surface);
-            margin-bottom: var(--spacing-xs);
-        }
-
-        .contact-item p {
-            margin: 0;
-            color: var(--md-sys-color-on-surface-variant);
-        }
-
-        .acknowledgment-card {
-            background: linear-gradient(135deg, var(--md-sys-color-tertiary-container) 0%, var(--md-sys-color-primary-container) 100%);
-            border-radius: var(--radius-lg);
-            padding: var(--spacing-xl);
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-lg);
-            box-shadow: var(--md-sys-elevation-2);
-            animation: fadeInUp 0.8s ease-out;
-        }
-
-        .acknowledgment-card .material-symbols-outlined {
-            font-size: 48px;
-            color: var(--md-sys-color-primary);
-            flex-shrink: 0;
-        }
-
-        .acknowledgment-card p {
-            margin: 0;
-            font-size: var(--md-sys-typescale-body-large);
-            color: var(--md-sys-color-on-tertiary-container);
-            font-weight: 500;
-        }
-
-        .footer {
-            background: linear-gradient(135deg, #001F14 0%, var(--md-sys-color-primary) 100%);
-            color: var(--md-sys-color-on-primary);
-            padding: var(--spacing-xl) 0;
-            text-align: center;
-            margin-top: var(--spacing-3xl);
-        }
-
-        .footer p {
-            margin: var(--spacing-xs) 0;
-            color: var(--md-sys-color-on-primary);
-        }
-
-        .footer-tagline {
-            font-size: var(--md-sys-typescale-body-medium);
-            opacity: 0.8;
-            font-style: italic;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInScale {
-            from {
-                opacity: 0;
-                transform: scale(0.8);
-            }
-
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes pulse {
-
-            0%,
-            100% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.05);
-            }
-        }
-
-        .ripple {
-            position: absolute;
-            border-radius: 50%;
-            background: rgba(0, 108, 76, 0.3);
-            transform: scale(0);
-            animation: ripple-animation 0.6s ease-out;
-            pointer-events: none;
-        }
-
-        @keyframes ripple-animation {
-            to {
-                transform: scale(4);
-                opacity: 0;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .page-title {
-                font-size: var(--md-sys-typescale-headline-large);
-            }
-
-            .hero-icon {
-                font-size: 48px;
-            }
-
-            .section-header h2 {
-                font-size: var(--md-sys-typescale-title-large);
-            }
-
-            .rights-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .acknowledgment-card {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .subsection {
-                padding-left: var(--spacing-md);
-            }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-
-            *,
-            *::before,
-            *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
-        }
-
-        a:focus,
-        button:focus {
-            outline: 2px solid var(--md-sys-color-primary);
-            outline-offset: 2px;
-        }
-
-        @media print {
-
-            .app-bar,
-            .footer {
-                display: none;
-            }
-
-            .content-card {
-                box-shadow: none;
-                border: 1px solid var(--md-sys-color-outline);
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AegisIAM – Identity & Access Management Security</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg-primary: hsl(220, 20%, 6%);
+      --bg-secondary: hsl(220, 16%, 16%);
+      --bg-card: hsl(220, 18%, 10%);
+      --bg-card-translucent: hsla(220, 18%, 10%, 0.5);
+      --accent: hsl(174, 72%, 50%);
+      --accent-light: hsl(174, 72%, 50%);
+      --accent-glow: hsla(174, 72%, 50%, 0.1);
+      --text-primary: hsl(210, 20%, 92%);
+      --text-secondary: hsl(215, 12%, 55%);
+      --border-color: hsl(220, 14%, 18%);
+      --border-faint: hsla(220, 14%, 18%, 0.5);
+      --surface: hsl(220, 16%, 12%);
+      --muted: hsl(220, 14%, 14%);
+      --font-body: 'Inter', sans-serif;
+      --font-display: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.5;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-display);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ── Navbar ── */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: hsla(220, 20%, 6%, 0.95);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-bottom: 1px solid hsla(220, 14%, 18%, 0.5);
+      transition: background-color 0.3s;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--accent-light);
+      letter-spacing: -0.02em;
+    }
+
+    .navbar-brand svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      transition: color 0.25s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-light);
+    }
+
+    .nav-linkedin {
+      display: inline-flex;
+      align-items: center;
+      color: var(--text-secondary);
+      transition: color 0.25s;
+    }
+
+    .nav-linkedin:hover {
+      color: #0a66c2;
+    }
+
+    .nav-linkedin svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.625rem 1.25rem;
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      font-weight: 600;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: all 0.3s;
+      border: none;
+    }
+
+    .btn-primary {
+      background-color: var(--accent);
+      color: var(--bg-primary);
+      box-shadow: 0 0 20px hsla(174, 72%, 50%, 0.3);
+    }
+
+    .btn-primary:hover {
+      background-color: hsl(174, 72%, 45%);
+      box-shadow: 0 0 30px hsla(174, 72%, 50%, 0.5);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--accent-light);
+      border: 1.5px solid hsla(174, 72%, 50%, 0.4);
+    }
+
+    .btn-outline:hover {
+      background: var(--accent-glow);
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    .btn-linkedin {
+      background-color: #0a66c2;
+      color: #fff;
+      box-shadow: 0 0 20px rgba(10, 102, 194, 0.3);
+    }
+
+    .btn-linkedin:hover {
+      background-color: #004182;
+      box-shadow: 0 0 30px rgba(10, 102, 194, 0.5);
+      transform: translateY(-1px);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .hamburger span {
+      width: 24px;
+      height: 2px;
+      background: var(--text-primary);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 7rem 2rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(ellipse at 35% 40%, hsla(174, 72%, 50%, 0.1) 0%, transparent 55%),
+                  radial-gradient(ellipse at 85% 50%, hsla(174, 72%, 50%, 0.06) 0%, transparent 45%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2rem, 5vw, 4rem);
+      align-items: center;
+    }
+
+    .hero-content {
+      text-align: left;
+      max-width: 36rem;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.375rem 1rem;
+      background: hsla(174, 72%, 50%, 0.05);
+      border: 1px solid hsla(174, 72%, 50%, 0.3);
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--accent-light);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 8px rgba(34, 197, 94, 0.6);
+      flex-shrink: 0;
+    }
+
+    .hero-badge svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.25rem, 4.2vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.025em;
+      color: var(--text-primary);
+    }
+
+    .hero h1 .gradient-text {
+      color: var(--accent);
+      text-shadow: 0 0 20px hsla(174, 72%, 50%, 0.4), 0 0 40px hsla(174, 72%, 50%, 0.15);
+    }
+
+    .hero p {
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      max-width: 32rem;
+      margin: 0 0 2rem;
+      line-height: 1.625;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: flex-start;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-ghost-light {
+      background: transparent;
+      color: var(--text-primary);
+      border: 1.5px solid hsla(210, 20%, 92%, 0.35);
+    }
+
+    .btn-ghost-light:hover {
+      border-color: hsla(210, 20%, 92%, 0.6);
+      background: hsla(210, 20%, 92%, 0.06);
+      transform: translateY(-1px);
+    }
+
+    .hero-visual {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-visual-frame {
+      position: relative;
+      width: 100%;
+      max-width: 520px;
+      margin-left: auto;
+      border-radius: 1rem;
+      overflow: hidden;
+      border: 1px solid hsla(174, 72%, 50%, 0.25);
+      box-shadow:
+        0 0 0 1px hsla(220, 14%, 18%, 0.8),
+        0 0 60px hsla(174, 72%, 50%, 0.15),
+        0 24px 48px rgba(0, 0, 0, 0.45);
+      background: #000;
+    }
+
+    .hero-visual-frame img {
+      display: block;
+      width: 100%;
+      height: auto;
+      vertical-align: middle;
+    }
+
+    .hero-visual-glow {
+      position: absolute;
+      inset: -20%;
+      background: radial-gradient(ellipse at center, hsla(174, 72%, 50%, 0.12) 0%, transparent 65%);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    /* ── Fade-in Animation ── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── Section Common ── */
+    .section {
+      padding: 6rem 2rem;
+    }
+
+    .section-label {
+      text-align: center;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: clamp(1.875rem, 3.5vw, 3rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+      letter-spacing: -0.025em;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: var(--text-secondary);
+      max-width: 640px;
+      margin: 0 auto 3rem;
+      font-size: 1rem;
+      line-height: 1.625;
+    }
+
+    /* ── Services Grid ── */
+    .services {
+      background: var(--bg-primary);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .service-card {
+      background: var(--bg-card-translucent);
+      border: 1px solid var(--border-color);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, hsla(174, 72%, 50%, 0.06), transparent 60%);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .service-card:hover {
+      border-color: hsla(174, 72%, 50%, 0.3);
+      transform: translateY(-4px);
+      box-shadow: 0 0 25px hsla(174, 72%, 50%, 0.1);
+    }
+
+    .service-card:hover::before {
+      opacity: 1;
+    }
+
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: hsla(174, 72%, 50%, 0.05);
+      border: 1px solid hsla(174, 72%, 50%, 0.3);
+      border-radius: 0.75rem;
+      margin-bottom: 1rem;
+      color: var(--accent-light);
+    }
+
+    .service-icon svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .service-card h3 {
+      font-size: 1.125rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      position: relative;
+    }
+
+    .service-card p {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.625;
+      position: relative;
+    }
+
+    /* ── Stats ── */
+    .stats {
+      background: linear-gradient(to bottom, var(--bg-primary), hsla(220, 16%, 12%, 0.5), var(--bg-primary));
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .stat-item {
+      padding: 1.5rem 0;
+    }
+
+    .stat-value {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 800;
+      color: var(--accent-light);
+      margin-bottom: 0.4rem;
+      letter-spacing: -0.025em;
+      text-shadow: 0 0 20px hsla(174, 72%, 50%, 0.4), 0 0 40px hsla(174, 72%, 50%, 0.15);
+    }
+
+    .stat-label {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      font-weight: 400;
+    }
+
+    /* ── CTA Section ── */
+    .cta-section {
+      background: linear-gradient(to bottom, var(--bg-primary), hsla(220, 16%, 12%, 0.5), var(--bg-primary));
+      text-align: center;
+      padding: 6rem 2rem;
+    }
+
+    .cta-section h2 {
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+      letter-spacing: -0.025em;
+    }
+
+    .cta-section p {
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto 2.5rem;
+      font-size: 1rem;
+      line-height: 1.625;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      border-top: 1px solid var(--border-color);
+      padding: 2.5rem 2rem;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-text {
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+    }
+
+    .footer-social {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .footer-social a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 0.5rem;
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      transition: all 0.25s;
+    }
+
+    .footer-social a:hover {
+      color: #0a66c2;
+      border-color: #0a66c2;
+      background: rgba(10, 102, 194, 0.1);
+    }
+
+    .footer-social a svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    /* ── Floating Orbs ── */
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(120px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .orb-1 {
+      width: 600px;
+      height: 600px;
+      background: hsla(174, 72%, 50%, 0.06);
+      top: -12rem;
+      left: -12rem;
+    }
+
+    .orb-2 {
+      width: 400px;
+      height: 400px;
+      background: hsla(174, 72%, 50%, 0.04);
+      top: 60%;
+      right: -12rem;
+    }
+
+    /* ── Mobile Nav ── */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: hsla(220, 20%, 6%, 0.98);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      z-index: 1100;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .mobile-menu.open {
+      display: flex;
+    }
+
+    .mobile-menu a {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      transition: color 0.25s;
+    }
+
+    .mobile-menu a:hover {
+      color: var(--accent-light);
+    }
+
+    .mobile-close {
+      position: absolute;
+      top: 1rem;
+      right: 1.2rem;
+      background: none;
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+      width: 40px;
+      height: 40px;
+      border-radius: 0.5rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.25s;
+      z-index: 1101;
+    }
+
+    .mobile-close:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .mobile-linkedin {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .mobile-linkedin svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    /* ── Grid Lines Background ── */
+    .grid-bg {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(hsla(220, 14%, 18%, 0.5) 1px, transparent 1px),
+        linear-gradient(90deg, hsla(220, 14%, 18%, 0.5) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+      mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+      -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+    }
+
+    /* ── Demo Modal ── */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: hsla(220, 20%, 4%, 0.85);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .modal-overlay.open {
+      display: flex;
+    }
+
+    .modal {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 1rem;
+      padding: 2.5rem;
+      width: 100%;
+      max-width: 480px;
+      position: relative;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      width: 32px;
+      height: 32px;
+      border-radius: 0.375rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.25s;
+    }
+
+    .modal-close:hover {
+      color: var(--text-primary);
+      border-color: var(--accent);
+    }
+
+    .modal h3 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    .modal .modal-desc {
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 0.375rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.625rem 0.875rem;
+      background: var(--bg-primary);
+      border: 1px solid var(--border-color);
+      border-radius: 0.5rem;
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      outline: none;
+      transition: border-color 0.25s;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: hsl(215, 12%, 40%);
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px hsla(174, 72%, 50%, 0.1);
+    }
+
+    .form-group textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-submit {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 180px;
+      margin: 0.75rem auto 0;
+      padding: 0.75rem 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    .form-success.show {
+      display: block;
+    }
+
+    .form-success svg {
+      width: 48px;
+      height: 48px;
+      color: var(--accent);
+      margin: 0 auto 1rem;
+    }
+
+    .form-success h4 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-success p {
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+    }
+
+    /* ── Glow effects ── */
+    .glow-text {
+      text-shadow: 0 0 20px hsla(174, 72%, 50%, 0.4), 0 0 40px hsla(174, 72%, 50%, 0.15);
+    }
+
+    .glow-border {
+      box-shadow: 0 0 15px rgba(36, 219, 201, 0.15), inset 0 0 15px rgba(36, 219, 201, 0.05);
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 1; }
+    }
+
+    .animate-pulse-glow {
+      animation: pulse-glow 3s ease-in-out infinite;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-content {
+        max-width: none;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .hero p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .hero-visual-frame {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 420px;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .navbar {
+        padding: 1rem 1.2rem;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .section {
+        padding: 4rem 1.2rem;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .modal {
+        padding: 2rem 1.5rem;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
-
 <body>
-    <div class="app-bar">
-        <div class="container">
-            <div class="app-bar-content">
-                <span class="material-symbols-outlined app-icon">menu_book</span>
-                <h1 class="app-title">Quran App</h1>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="#" class="navbar-brand">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+      AegisIAM
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#stats">About</a></li>
+      <li><a href="#cta">Contact</a></li>
+      <li>
+        <a href="https://www.linkedin.com/company/fortifytrust-technologies/" target="_blank" rel="noopener" class="nav-linkedin" title="Follow us on LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </li>
+      <li><button class="btn btn-primary" style="padding:0.5rem 1.2rem; font-size:0.85rem;" onclick="openDemoModal()">Schedule a Demo</button></li>
+    </ul>
+    <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.add('open')" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" onclick="closeMobileMenu()" aria-label="Close menu">&times;</button>
+    <a href="#services" onclick="closeMobileMenu()">Services</a>
+    <a href="#stats" onclick="closeMobileMenu()">About</a>
+    <a href="#cta" onclick="closeMobileMenu()">Contact</a>
+    <a href="https://www.linkedin.com/company/fortifytrust-technologies/" target="_blank" rel="noopener" class="mobile-linkedin" onclick="closeMobileMenu()">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      LinkedIn
+    </a>
+    <button class="btn btn-primary" onclick="closeMobileMenu(); openDemoModal();">Schedule a Demo</button>
+  </div>
+
+  <!-- Demo Modal -->
+  <div class="modal-overlay" id="demoModal">
+    <div class="modal">
+      <button class="modal-close" onclick="closeDemoModal()" aria-label="Close">&times;</button>
+
+      <div id="demoFormContainer">
+        <h3>Schedule a Demo</h3>
+        <p class="modal-desc">Fill in your details and our team will get back to you within 24 hours.</p>
+        <form id="demoForm" action="https://formsubmit.co/aamirr.1232@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New Demo Request - AegisIAM">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="#">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="First Name" placeholder="John" required>
             </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="Last Name" placeholder="Doe" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Work Email</label>
+            <input type="email" id="email" name="Email" placeholder="john@company.com" required>
+          </div>
+          <div class="form-group">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="Company" placeholder="Your company name">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="Message" placeholder="Tell us about your IAM needs..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Submit Request
+          </button>
+        </form>
+      </div>
+
+      <div class="form-success" id="formSuccess">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+        </svg>
+        <h4>Request Submitted!</h4>
+        <p>Thank you for your interest. Our team will reach out to you shortly.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="grid-bg"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="hero-inner">
+      <div class="hero-content fade-in">
+        <div class="hero-badge">
+          <span class="hero-badge-dot" aria-hidden="true"></span>
+          Identity-First Security
         </div>
+        <h1>
+          Secure Every <span class="gradient-text">Identity.</span><br/>
+          Control Every <span class="gradient-text">Access.</span>
+        </h1>
+        <p>Enterprise-grade Identity &amp; Access Management solutions that protect your organization from unauthorized access, insider threats, and credential-based attacks.</p>
+        <div class="hero-buttons">
+          <button type="button" class="btn btn-primary" onclick="openDemoModal()">
+            Schedule a Demo
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </button>
+          <a href="#services" class="btn btn-ghost-light">Learn More</a>
+        </div>
+      </div>
+      <div class="hero-visual fade-in">
+        <div class="hero-visual-glow"></div>
+        <div class="hero-visual-frame">
+          <img src="images/hero-shield.png" alt="Cybersecurity shield with biometric fingerprint and circuit network — FortifyTrust Technologies" width="800" height="800" loading="eager" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section services" id="services">
+    <div class="fade-in">
+      <p class="section-label">Our Services</p>
+      <h2 class="section-title">Comprehensive IAM Solutions</h2>
+      <p class="section-subtitle">End-to-end identity security services designed to protect your most critical assets &mdash; your users and their access.</p>
     </div>
 
-    <main class="main-content">
-        <div class="container">
-            <div class="hero-section">
-                <span class="material-symbols-outlined hero-icon">shield</span>
-                <h1 class="page-title">Privacy Policy</h1>
-                <p class="last-updated">Last Updated: February 16, 2026</p>
-            </div>
-
-            <div class="content-card">
-                <section class="policy-section">
-                    <div class="section-header">
-                        <span class="material-symbols-outlined section-icon">info</span>
-                        <h2>Introduction</h2>
-                    </div>
-                    <p>Welcome to Quran App. We are committed to protecting your privacy and ensuring you have a
-                        positive experience while using our application. This Privacy Policy explains how we collect,
-                        use, disclose, and safeguard your information when you use our mobile application.</p>
-                    <p>Please read this privacy policy carefully. If you do not agree with the terms of this privacy
-                        policy, please do not access the application.</p>
-                </section>
-
-                <section class="policy-section">
-                    <div class="section-header">
-                        <span class="material-symbols-outlined section-icon">storage</span>
-                        <h2>Information We Collect</h2>
-                    </div>
-
-                    <div class="subsection">
-                        <h3>Personal Information</h3>
-                        <p>We may collect the following types of personal information:</p>
-                        <ul class="info-list">
-                            <li>
-                                <span class="material-symbols-outlined list-icon">check_circle</span>
-                                <span>Reading preferences and bookmarks</span>
-                            </li>
-                            <li>
-                                <span class="material-symbols-outlined list-icon">check_circle</span>
-                                <span>Audio playback history and settings</span>
-                            </li>
-                            <li>
-                                <span class="material-symbols-outlined list-icon">check_circle</span>
-                                <span>Prayer time preferences and location data (if enabled)</span>
-                            </li>
-                            <li>
-                                <span class="material-symbols-outlined list-icon">check_circle</span>
-                                <span>App usage statistics and crash reports</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="subsection">
-                        <h3>Automatically Collected Information</h3>
-                        <p>When you use our app, we may automatically collect:</p>
-                        <ul class="info-list">
-                            <li>
-                                <span class="material-symbols-outlined list-icon">check_circle</span>
-                                <span>Device information (model, operating system version)</span>
-                            </li>
-                            <li>
-                                <span class="material-symbols-outlined list-icon">check_circle</span>
-                                <span>App performance data and error logs</span>
-                            </li>
-                            <li>
-                                <span class="material-symbols-outlined list-icon">check_circle</span>
-                                <span>Usage patterns and feature interactions</span>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-
-                <section class="policy-section">
-                    <div class="section-header">
-                        <span class="material-symbols-outlined section-icon">how_to_reg</span>
-                        <h2>How We Use Your Information</h2>
-                    </div>
-                    <p>We use the information we collect to:</p>
-                    <ul class="info-list">
-                        <li>
-                            <span class="material-symbols-outlined list-icon">arrow_right</span>
-                            <span>Provide and maintain the app's functionality</span>
-                        </li>
-                        <li>
-                            <span class="material-symbols-outlined list-icon">arrow_right</span>
-                            <span>Personalize your reading and listening experience</span>
-                        </li>
-                        <li>
-                            <span class="material-symbols-outlined list-icon">arrow_right</span>
-                            <span>Calculate accurate prayer times based on your location</span>
-                        </li>
-                        <li>
-                            <span class="material-symbols-outlined list-icon">arrow_right</span>
-                            <span>Improve app performance and fix bugs</span>
-                        </li>
-                        <li>
-                            <span class="material-symbols-outlined list-icon">arrow_right</span>
-                            <span>Analyze usage patterns to enhance user experience</span>
-                        </li>
-                        <li>
-                            <span class="material-symbols-outlined list-icon">arrow_right</span>
-                            <span>Send important updates and notifications</span>
-                        </li>
-                    </ul>
-                </section>
-
-                <section class="policy-section">
-                    <div class="section-header">
-                        <span class="material-symbols-outlined section-icon">location_on</span>
-                        <h2>Location Data</h2>
-                    </div>
-                    <p>Our app may request access to your device's location to provide accurate prayer times (Adan).
-                        This feature is optional and can be enabled or disabled at any time through your device
-                        settings.</p>
-                    <div class="highlight-box">
-                        <span class="material-symbols-outlined">privacy_tip</span>
-                        <p><strong>Your Control:</strong> Location data is only used locally on your device to calculate
-                            prayer times. We do not store or transmit your precise location to our servers.</p>
-                    </div>
-                </section>
-
-                <section class="policy-section">
-                    <div class="section-header">
-                        <span class="material-symbols-outlined section-icon">share</span>
-                        <h2>Data Sharing and Disclosure</h2>
-                    </div>
-                    <p>We respect your privacy and do not sell, trade, or rent your personal information to third
-                        parties. We may share your information only in the following circumstances:</p>
-                    <ul class="info-list">
-                        <li>
-                            <span class="material-symbols-outlined list-icon">verified_user</span>
-                            <span><strong>With Your Consent:</strong> When you explicitly authorize us to share
-                                information</span>
-                        </li>
-                        <li>
-                            <span class="material-symbols-outlined list-icon">verified_user</span>
-                            <span><strong>Service Providers:</strong> With trusted third-party services that help us
-                                operate the app (e.g., analytics, crash reporting)</span>
-                        </li>
-                        <li>
-                            <span class="material-symbols-outlined list-icon">verified_user</span>
-                            <span><strong>Legal Requirements:</strong> When required by law or to protect our
-                                rights</span>
-                        </li>
-                    </ul>
-                </section>
-
-                <section class="policy-section">
-                    <div class="section-header">
-                        <span class="material-symbols-outlined section-icon">security</span>
-                        <h2>Data Security</h2>
-                    </div>
-                    <p>We implement appropriate technical and organizational security measures to protect your personal
-                        information against unauthorized access, alteration, disclosure, or destruction. These measures
-                        include:</p>
-                    <ul class="info-list">
-                        <li>
-                            <span class="material-symbols-outlined list-icon">lock</span>
-                            <span>Encryption of data in transit and at rest</span>
-                        </li>
-                        <li>
-                            <span class="material-symbols-outlined list-icon">lock</span>
-                            <span>Regular security assessments and updates</span>
-                        </li>
-                        <li>
-                            <span class="material-symbols-outlined list-icon">lock</span>
-                            <span>Limited access to personal information by authorized personnel only</span>
-                        </li>
-                    </ul>
-                </section>
-
-                <section class="policy-section">
-                    <div class="section-header">
-                        <span class="material-symbols-outlined section-icon">settings</span>
-                        <h2>Your Privacy Rights</h2>
-                    </div>
-                    <p>You have the following rights regarding your personal information:</p>
-                    <div class="rights-grid">
-                        <div class="right-card">
-                            <span class="material-symbols-outlined">visibility</span>
-                            <h3>Access</h3>
-                            <p>Request access to your personal data</p>
-                        </div>
-                        <div class="right-card">
-                            <span class="material-symbols-outlined">edit</span>
-                            <h3>Correction</h3>
-                            <p>Update or correct your information</p>
-                        </div>
-                        <div class="right-card">
-                            <span class="material-symbols-outlined">delete</span>
-                            <h3>Deletion</h3>
-                            <p>Request deletion of your data</p>
-                        </div>
-                        <div class="right-card">
-                            <span class="material-symbols-outlined">block</span>
-                            <h3>Opt-Out</h3>
-                            <p>Withdraw consent for data collection</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="policy-section">
-                    <div class="section-header">
-                        <span class="material-symbols-outlined section-icon">child_care</span>
-                        <h2>Children's Privacy</h2>
-                    </div>
-                    <p>Our app is designed for users of all ages. We do not knowingly collect personal information from
-                        children under 13 without parental consent. If you believe we have inadvertently collected such
-                        information, please contact us immediately.</p>
-                </section>
-
-                <section class="policy-section">
-                    <div class="section-header">
-                        <span class="material-symbols-outlined section-icon">update</span>
-                        <h2>Changes to This Privacy Policy</h2>
-                    </div>
-                    <p>We may update this Privacy Policy from time to time to reflect changes in our practices or for
-                        other operational, legal, or regulatory reasons. We will notify you of any material changes by:
-                    </p>
-                    <ul class="info-list">
-                        <li>
-                            <span class="material-symbols-outlined list-icon">notifications</span>
-                            <span>Posting the new Privacy Policy in the app</span>
-                        </li>
-                        <li>
-                            <span class="material-symbols-outlined list-icon">notifications</span>
-                            <span>Updating the "Last Updated" date at the top of this policy</span>
-                        </li>
-                        <li>
-                            <span class="material-symbols-outlined list-icon">notifications</span>
-                            <span>Sending you a notification through the app</span>
-                        </li>
-                    </ul>
-                </section>
-
-                <section class="policy-section">
-                    <div class="section-header">
-                        <span class="material-symbols-outlined section-icon">contact_mail</span>
-                        <h2>Contact Us</h2>
-                    </div>
-                    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data
-                        practices, please contact us:</p>
-                    <div class="contact-box">
-                        <div class="contact-item">
-                            <span class="material-symbols-outlined">email</span>
-                            <div>
-                                <strong>Email</strong>
-                                <p>privacy@quranapp.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <span class="material-symbols-outlined">language</span>
-                            <div>
-                                <strong>Website</strong>
-                                <p>www.quranapp.com</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-
-            <div class="acknowledgment-card">
-                <span class="material-symbols-outlined">task_alt</span>
-                <p>By using Quran App, you acknowledge that you have read and understood this Privacy Policy and agree
-                    to its terms.</p>
-            </div>
+    <div class="services-grid">
+      <div class="service-card fade-in">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+          </svg>
         </div>
-    </main>
+        <h3>Multi-Factor Authentication</h3>
+        <p>Deploy adaptive MFA across your organization with biometrics, tokens, and contextual risk analysis.</p>
+      </div>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Quran App. All rights reserved.</p>
-            <p class="footer-tagline">Bringing the Holy Quran closer to you</p>
+      <div class="service-card fade-in">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
         </div>
-    </footer>
+        <h3>Privileged Access Management</h3>
+        <p>Secure, monitor, and audit privileged accounts with just-in-time access and session recording.</p>
+      </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            initSmoothScroll();
-            initScrollAnimations();
-            initRippleEffects();
-            initReadingProgress();
-            initCopyToClipboard();
-        });
+      <div class="service-card fade-in">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <h3>Identity Governance</h3>
+        <p>Automate user lifecycle management, access certifications, and separation-of-duties enforcement.</p>
+      </div>
 
-        function initSmoothScroll() {
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
+      <div class="service-card fade-in">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
+          </svg>
+        </div>
+        <h3>Zero Trust Architecture</h3>
+        <p>Implement zero-trust principles with continuous verification, micro-segmentation, and least-privilege access.</p>
+      </div>
+
+      <div class="service-card fade-in">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.78 7.78 5.5 5.5 0 0 1 7.78-7.78zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/>
+          </svg>
+        </div>
+        <h3>Single Sign-On</h3>
+        <p>Streamline access with enterprise SSO supporting SAML, OIDC, and federation across cloud and on-premise apps.</p>
+      </div>
+
+      <div class="service-card fade-in">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
+        </div>
+        <h3>Threat Detection &amp; Response</h3>
+        <p>Real-time monitoring of identity-based threats with AI-driven anomaly detection and automated response.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="section stats" id="stats">
+    <div class="stats-grid fade-in">
+      <div class="stat-item">
+        <div class="stat-value" data-target="99.9" data-suffix="%">0%</div>
+        <div class="stat-label">Uptime Guarantee</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" data-target="500" data-suffix="+">0+</div>
+        <div class="stat-label">Enterprises Protected</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" data-target="10" data-suffix="M+" data-prefix="">0M+</div>
+        <div class="stat-label">Identities Managed</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" data-static="true">&lt;2min</div>
+        <div class="stat-label">Avg. Incident Response</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section cta-section" id="cta">
+    <div class="fade-in">
+      <h2>Ready to Secure Your<br/>Identity Perimeter?</h2>
+      <p>Our team of IAM experts will assess your current security posture and design a tailored solution that fits your organization's needs.</p>
+      <div class="cta-buttons">
+        <button class="btn btn-primary" onclick="openDemoModal()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Request a Consultation
+        </button>
+        <a href="https://www.linkedin.com/company/fortifytrust-technologies/" target="_blank" rel="noopener" class="btn btn-linkedin">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          Follow on LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-text">&copy; 2026 AegisIAM. All rights reserved. | Identity &amp; Access Management Security</p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/company/fortifytrust-technologies/" target="_blank" rel="noopener" title="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* ── Mobile Menu ── */
+    function closeMobileMenu() {
+      document.getElementById('mobileMenu').classList.remove('open');
+    }
+
+    /* ── Demo Modal ── */
+    function openDemoModal() {
+      document.getElementById('demoFormContainer').style.display = 'block';
+      document.getElementById('formSuccess').classList.remove('show');
+      document.getElementById('demoModal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeDemoModal() {
+      document.getElementById('demoModal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('demoModal').addEventListener('click', function(e) {
+      if (e.target === this) closeDemoModal();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeDemoModal();
+        closeMobileMenu();
+      }
+    });
+
+    document.getElementById('demoForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const form = this;
+      const formData = new FormData(form);
+
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      }).then(function(response) {
+        if (response.ok) {
+          document.getElementById('demoFormContainer').style.display = 'none';
+          document.getElementById('formSuccess').classList.add('show');
+          form.reset();
+        } else {
+          alert('Something went wrong. Please try again.');
+        }
+      }).catch(function() {
+        alert('Network error. Please check your connection and try again.');
+      });
+    });
+
+    /* ── Intersection Observer for fade-in animations ── */
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+
+    /* ── Animated Counters ── */
+    var countersAnimated = false;
+
+    var statsObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting && !countersAnimated) {
+          countersAnimated = true;
+          animateCounters();
+        }
+      });
+    }, { threshold: 0.3 });
+
+    var statsSection = document.getElementById('stats');
+    if (statsSection) statsObserver.observe(statsSection);
+
+    function animateCounters() {
+      document.querySelectorAll('.stat-value').forEach(function(el) {
+        if (el.dataset.static === 'true') return;
+
+        var target = parseFloat(el.dataset.target);
+        var suffix = el.dataset.suffix || '';
+        var prefix = el.dataset.prefix || '';
+        var isDecimal = target % 1 !== 0;
+        var duration = 2000;
+        var startTime = performance.now();
+
+        function update(currentTime) {
+          var elapsed = currentTime - startTime;
+          var progress = Math.min(elapsed / duration, 1);
+          var eased = 1 - Math.pow(1 - progress, 3);
+          var current = target * eased;
+
+          if (isDecimal) {
+            el.textContent = prefix + current.toFixed(1) + suffix;
+          } else {
+            el.textContent = prefix + Math.floor(current) + suffix;
+          }
+
+          if (progress < 1) {
+            requestAnimationFrame(update);
+          } else {
+            el.textContent = isDecimal ? prefix + target.toFixed(1) + suffix : prefix + target + suffix;
+          }
         }
 
-        function initScrollAnimations() {
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
+        requestAnimationFrame(update);
+      });
+    }
 
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, observerOptions);
-
-            document.querySelectorAll('.policy-section').forEach(section => {
-                section.style.opacity = '0';
-                section.style.transform = 'translateY(20px)';
-                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                observer.observe(section);
-            });
-
-            document.querySelectorAll('.right-card').forEach((card, index) => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(20px)';
-                card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
-                observer.observe(card);
-            });
-        }
-
-        function initRippleEffects() {
-            const rippleElements = document.querySelectorAll('.right-card, .contact-item, .info-list li');
-
-            rippleElements.forEach(element => {
-                element.addEventListener('click', function (e) {
-                    const ripple = document.createElement('span');
-                    const rect = this.getBoundingClientRect();
-                    const size = Math.max(rect.width, rect.height);
-                    const x = e.clientX - rect.left - size / 2;
-                    const y = e.clientY - rect.top - size / 2;
-
-                    ripple.style.width = ripple.style.height = size + 'px';
-                    ripple.style.left = x + 'px';
-                    ripple.style.top = y + 'px';
-                    ripple.classList.add('ripple');
-
-                    if (getComputedStyle(this).position === 'static') {
-                        this.style.position = 'relative';
-                    }
-                    this.style.overflow = 'hidden';
-
-                    this.appendChild(ripple);
-
-                    setTimeout(() => {
-                        ripple.remove();
-                    }, 600);
-                });
-            });
-        }
-
-        function initReadingProgress() {
-            const progressBar = document.createElement('div');
-            progressBar.id = 'reading-progress';
-            progressBar.style.cssText = `
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 0%;
-        height: 3px;
-        background: linear-gradient(90deg, #006C4C, #89F8C7);
-        z-index: 1000;
-        transition: width 0.1s ease;
-    `;
-            document.body.appendChild(progressBar);
-
-            window.addEventListener('scroll', () => {
-                const windowHeight = window.innerHeight;
-                const documentHeight = document.documentElement.scrollHeight - windowHeight;
-                const scrolled = window.scrollY;
-                const progress = (scrolled / documentHeight) * 100;
-                progressBar.style.width = progress + '%';
-            });
-        }
-
-        function initCopyToClipboard() {
-            const contactItems = document.querySelectorAll('.contact-item');
-
-            contactItems.forEach(item => {
-                const textElement = item.querySelector('p');
-                if (!textElement) return;
-
-                const copyIcon = document.createElement('span');
-                copyIcon.className = 'material-symbols-outlined';
-                copyIcon.textContent = 'content_copy';
-                copyIcon.style.cssText = `
-            font-size: 20px;
-            color: var(--md-sys-color-primary);
-            cursor: pointer;
-            opacity: 0.6;
-            transition: opacity 0.3s ease;
-            margin-left: auto;
-        `;
-
-                item.style.cursor = 'pointer';
-                item.appendChild(copyIcon);
-
-                item.addEventListener('click', async () => {
-                    const text = textElement.textContent;
-                    try {
-                        await navigator.clipboard.writeText(text);
-                        showToast('Copied to clipboard!');
-
-                        copyIcon.textContent = 'check';
-                        setTimeout(() => {
-                            copyIcon.textContent = 'content_copy';
-                        }, 2000);
-                    } catch (err) {
-                        console.error('Failed to copy:', err);
-                        showToast('Failed to copy');
-                    }
-                });
-
-                item.addEventListener('mouseenter', () => {
-                    copyIcon.style.opacity = '1';
-                });
-
-                item.addEventListener('mouseleave', () => {
-                    copyIcon.style.opacity = '0.6';
-                });
-            });
-        }
-
-        function showToast(message) {
-            const existingToast = document.getElementById('toast');
-            if (existingToast) {
-                existingToast.remove();
-            }
-
-            const toast = document.createElement('div');
-            toast.id = 'toast';
-            toast.textContent = message;
-            toast.style.cssText = `
-        position: fixed;
-        bottom: 24px;
-        left: 50%;
-        transform: translateX(-50%) translateY(100px);
-        background: #191C1A;
-        color: #FFFFFF;
-        padding: 12px 24px;
-        border-radius: 8px;
-        font-size: 14px;
-        font-weight: 500;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        z-index: 1001;
-        transition: transform 0.3s ease;
-    `;
-
-            document.body.appendChild(toast);
-
-            setTimeout(() => {
-                toast.style.transform = 'translateX(-50%) translateY(0)';
-            }, 10);
-
-            setTimeout(() => {
-                toast.style.transform = 'translateX(-50%) translateY(100px)';
-                setTimeout(() => {
-                    toast.remove();
-                }, 300);
-            }, 2000);
-        }
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
-                const sections = Array.from(document.querySelectorAll('.policy-section'));
-                const currentSection = sections.find(section => {
-                    const rect = section.getBoundingClientRect();
-                    return rect.top >= 0 && rect.top <= window.innerHeight / 2;
-                });
-
-                if (currentSection) {
-                    const currentIndex = sections.indexOf(currentSection);
-                    const nextIndex = e.key === 'ArrowDown'
-                        ? Math.min(currentIndex + 1, sections.length - 1)
-                        : Math.max(currentIndex - 1, 0);
-
-                    sections[nextIndex].scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            }
-        });
-    </script>
+    /* ── Navbar background on scroll ── */
+    window.addEventListener('scroll', function() {
+      var navbar = document.querySelector('.navbar');
+      navbar.style.backgroundColor = window.scrollY > 50
+        ? 'hsla(220, 20%, 6%, 0.98)'
+        : 'hsla(220, 20%, 6%, 0.95)';
+    });
+  </script>
 </body>
-
 </html>
