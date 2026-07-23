@@ -1,183 +1,215 @@
 <!DOCTYPE html>
-
-
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VitalDiary - Privacy Policy</title>
-
+    <title>About - Al-Quran</title>
+    <meta name="description" content="About Al-Quran app – read the Holy Quran, listen to recitations, track progress, and stay connected with family.">
     <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
+        /* App theme: #007AFF, #397AC1, #B7DAFF, #FFFFFF, #243757 */
+        :root {
+            --primary: #007AFF;
+            --primary-dark: #0062CC;
+            --secondary: #397AC1;
+            --pale: #B7DAFF;
+            --white: #FFFFFF;
+            --navy: #243757;
+            --on-surface-variant: #5A6B7D;
+            --surface-variant: #E8EEF5;
+            --elevation-1: 0 1px 3px rgba(36, 55, 87, 0.08);
+            --elevation-2: 0 2px 6px rgba(36, 55, 87, 0.12);
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --spacing-sm: 8px;
+            --spacing-md: 16px;
+            --spacing-lg: 24px;
+            --spacing-xl: 32px;
+            --spacing-2xl: 48px;
         }
-
-        body{
-            font-family:Arial,Helvetica,sans-serif;
-            background:#f4f7fb;
-            color:#333;
-            line-height:1.8;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--navy);
+            background: var(--white);
+            -webkit-font-smoothing: antialiased;
+            padding: var(--spacing-md);
+            padding-bottom: 48px;
+            max-width: 720px;
+            margin: 0 auto;
         }
-
-        .container{
-            max-width:900px;
-            margin:40px auto;
-            background:#fff;
-            padding:40px;
-            border-radius:12px;
-            box-shadow:0 4px 12px rgba(0,0,0,.08);
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white);
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--spacing-lg);
+            box-shadow: var(--elevation-2);
         }
-
-        h1{
-            color:#1976D2;
-            margin-bottom:10px;
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
         }
-
-        h2{
-            margin-top:30px;
-            color:#1976D2;
+        .header .tagline {
+            font-size: 15px;
+            opacity: 0.95;
+            margin-top: var(--spacing-sm);
         }
-
-        p,li{
-            margin-top:10px;
+        .card {
+            background: var(--white);
+            border: 1px solid var(--surface-variant);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            margin-bottom: var(--spacing-md);
+            box-shadow: var(--elevation-1);
         }
-
-        ul{
-            margin-left:20px;
+        .card h2 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: var(--spacing-sm);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
         }
-
-        footer{
-            margin-top:40px;
-            text-align:center;
-            color:#777;
-            font-size:14px;
+        .card h2::before {
+            content: "";
+            width: 4px;
+            height: 20px;
+            background: var(--primary);
+            border-radius: 2px;
         }
-
-        a{
-            color:#1976D2;
-            text-decoration:none;
+        .card p {
+            color: var(--on-surface-variant);
+            font-size: 15px;
+            line-height: 1.65;
+            margin-bottom: var(--spacing-sm);
         }
-
-        .date{
-            color:#666;
-            margin-bottom:20px;
+        .card p:last-child { margin-bottom: 0; }
+        .highlight {
+            background: var(--pale);
+            color: var(--navy);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--primary);
+            margin: var(--spacing-md) 0;
+            font-size: 15px;
         }
+        .list {
+            list-style: none;
+            margin-top: var(--spacing-sm);
+        }
+        .list li {
+            padding: var(--spacing-sm) 0;
+            padding-left: 24px;
+            position: relative;
+            color: var(--on-surface-variant);
+            font-size: 15px;
+        }
+        .list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 14px;
+            width: 6px;
+            height: 6px;
+            background: var(--primary);
+            border-radius: 50%;
+        }
+        .sub-list { margin-top: var(--spacing-sm); margin-left: 16px; }
+        .sub-list li { padding-left: 20px; }
+        .sub-list li::before { width: 4px; height: 4px; top: 15px; }
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:active { color: var(--primary-dark); }
+        .last-updated {
+            font-size: 13px;
+            color: var(--on-surface-variant);
+            margin-top: var(--spacing-lg);
+            padding-top: var(--spacing-md);
+            border-top: 1px solid var(--surface-variant);
+        }
+        .footer {
+            text-align: center;
+            padding: var(--spacing-xl) 0;
+            color: var(--on-surface-variant);
+            font-size: 14px;
+        }
+        .footer a { margin: 0 4px; }
     </style>
 </head>
-
 <body>
+    <header class="header">
+        <h1>Al-Quran</h1>
+        <p class="tagline">Read the Quran, track progress, and stay connected with family.</p>
+    </header>
 
-<div class="container">
+    <section class="card">
+        <h2>About the app</h2>
+        <p>Al-Quran is a free app designed to bring the Holy Quran closer to you every day. Whether you want to read at your own pace, listen to beautiful recitations, or keep track of your progress, the app is built to support your journey.</p>
+        <p>You can read the full Quran text with translations in multiple languages, bookmark verses, follow reading plans, and share with family through circles—all in one place.</p>
+        <div class="highlight">
+            Made with care for the Muslim community.
+        </div>
+    </section>
 
-<h1>Privacy Policy</h1>
+    <section class="card">
+        <h2>Our mission</h2>
+        <p>We aim to make the Quran accessible, easy to read, and easy to live with. The app is built to work offline where possible, so you can read and listen even without an internet connection. We respect your privacy and do not use your reading data for advertising.</p>
+    </section>
 
-<p class="date">
-Last Updated: July 24, 2026
-</p>
+    <section class="card">
+        <h2>Features</h2>
+        <ul class="list">
+            <li><strong>Full Quran text</strong> – Complete Arabic text with Uthmani script and multiple translations</li>
+            <li><strong>Audio recitations</strong> – Listen to renowned reciters; stream or download for offline use</li>
+            <li><strong>Bookmarks and progress</strong> – Save verses and track your reading across devices when signed in</li>
+            <li><strong>Prayer times and Qibla</strong> – Accurate prayer times and a Qibla compass</li>
+            <li><strong>Duas and Dhikr</strong> – Collections of supplications and remembrances</li>
+            <li><strong>Family circles</strong> – Stay connected with family and share progress or verses</li>
+            <li><strong>Reading plans and Juz</strong> – Structure your reading by Juz or follow a plan</li>
+            <li><strong>Search</strong> – Find verses and topics quickly</li>
+        </ul>
+    </section>
 
-<p>
-Thank you for using <strong>VitalDiary</strong>.
-Your privacy is important to us. This Privacy Policy explains how we collect,
-use, and protect your information when you use our mobile application.
-</p>
+    <section class="card">
+        <h2>Translations and recitations</h2>
+        <p>Quran text and translations are sourced from trusted, well-known editions. Audio recitations are provided by respected reciters and platforms. We are grateful to the scholars, translators, and reciters who make this content available.</p>
+        <p>If you have feedback about a translation or recitation, please get in touch through the app or the contact details below.</p>
+    </section>
 
-<h2>Information We Collect</h2>
+    <section class="card">
+        <h2>How to get the most from the app</h2>
+        <ul class="list">
+            <li>Set your preferred translation and font size in Settings.</li>
+            <li>Enable prayer times and allow location (optional) for accurate Adhan times.</li>
+            <li>Use bookmarks to revisit verses and sync them by signing in.</li>
+            <li>Join or create a family circle to share progress with loved ones.</li>
+        </ul>
+    </section>
 
-<p>Depending on the features you use, VitalDiary may collect:</p>
+    <section class="card">
+        <h2>Contact and feedback</h2>
+        <p>We welcome your feedback, suggestions, and reports of any issues. For general support, privacy questions, or to report a problem, please use the contact option in the app or reach out via the store listing.</p>
+    </section>
 
-<ul>
-<li>Name and email address (when signing in with Google).</li>
-<li>Health information entered by you such as blood pressure, heart rate, blood sugar, temperature, weight, SpO₂, sleep records, medicines, and notes.</li>
-<li>Basic device information for security and troubleshooting.</li>
-</ul>
+    <section class="card">
+        <h2>Credits and acknowledgments</h2>
+        <p>We thank the providers of Quran text, translations, and recitations. This app would not be possible without their work and the broader open and licensed resources that serve the Ummah.</p>
+    </section>
 
-<h2>How We Use Your Information</h2>
+    <p class="last-updated">Last updated: March 2025</p>
 
-<ul>
-<li>Provide and improve the app.</li>
-<li>Save your health records securely.</li>
-<li>Synchronize data across your devices (if cloud backup is enabled).</li>
-<li>Generate reports that you choose to export or share.</li>
-</ul>
-
-<h2>Data Storage</h2>
-
-<p>
-Your data is stored securely using trusted cloud services.
-We use reasonable security measures to protect your personal information.
-</p>
-
-<h2>Advertising</h2>
-
-<p>
-The free version of VitalDiary may display advertisements using Google AdMob.
-AdMob may collect anonymous device identifiers to provide personalized or non-personalized ads according to Google's policies.
-</p>
-
-<h2>Third-Party Services</h2>
-
-<p>Our app may use services provided by:</p>
-
-<ul>
-<li>Google Firebase</li>
-<li>Google Sign-In</li>
-<li>Google AdMob</li>
-</ul>
-
-<p>
-These services have their own privacy policies.
-</p>
-
-<h2>Data Sharing</h2>
-
-<p>
-We do not sell your personal information.
-Your information is shared only when necessary to provide app functionality or when required by law.
-</p>
-
-<h2>Your Rights</h2>
-
-<p>You may:</p>
-
-<ul>
-<li>Access your data.</li>
-<li>Update your information.</li>
-<li>Delete your account and stored data.</li>
-<li>Contact us regarding any privacy concerns.</li>
-</ul>
-
-<h2>Children's Privacy</h2>
-
-<p>
-VitalDiary is not intended for children under 13 years of age.
-We do not knowingly collect personal information from children.
-</p>
-
-<h2>Changes to This Policy</h2>
-
-<p>
-We may update this Privacy Policy from time to time.
-Any changes will be posted on this page with the updated date.
-</p>
-
-<h2>Contact Us</h2>
-
-<p>
-If you have any questions regarding this Privacy Policy, you can contact us at:
-</p>
-
-<p>
-<strong>Email:</strong> your-email@example.com
-</p>
-
-<footer>
-© 2026 VitalDiary. All Rights Reserved.
-</footer>
-
-</div>
-
+    <footer class="footer">
+        <a href="https://amirr90.github.io/quran_privacy_page/privacy-policy-blogger.html" id="privacy-link">Privacy policy</a>
+        <span>&middot;</span>
+        <span>&copy; Al-Quran</span>
+    </footer>
 </body>
 </html>
