@@ -1,0 +1,1806 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Privacy Policy for Crickdin (The Cricket Operating System). Learn how we protect player stats, media uploads, venue bookings, payments, and personal information.">
+  <meta name="keywords" content="Crickdin, Privacy Policy, Cricket OS, Player Privacy, Cricket Scoring, Turf Booking Privacy">
+  <meta name="author" content="Crickdin Technologies">
+  <title>Privacy Policy | Crickdin — The Cricket Operating System</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+      /* Dark Theme (Default) */
+      --bg-base: #080C14;
+      --bg-surface: #0E1624;
+      --bg-surface-elevated: #152236;
+      --bg-surface-glass: rgba(14, 22, 36, 0.75);
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-focus: rgba(26, 143, 227, 0.4);
+      --text-primary: #F1F5F9;
+      --text-secondary: #94A3B8;
+      --text-muted: #64748B;
+      --primary: #1A8FE3;
+      --primary-hover: #38BDF8;
+      --primary-glow: rgba(26, 143, 227, 0.25);
+      --accent-green: #00E676;
+      --accent-green-subtle: rgba(0, 230, 118, 0.12);
+      --accent-amber: #F59E0B;
+      --accent-purple: #8B5CF6;
+      --card-shadow: 0 12px 32px -4px rgba(0, 0, 0, 0.5);
+      --badge-bg: rgba(26, 143, 227, 0.12);
+      --search-bg: rgba(21, 34, 54, 0.85);
+      --highlight: rgba(26, 143, 227, 0.35);
+      --code-bg: rgba(0, 0, 0, 0.4);
+      --mesh-1: rgba(26, 143, 227, 0.15);
+      --mesh-2: rgba(0, 230, 118, 0.08);
+      --mesh-3: rgba(139, 92, 246, 0.08);
+    }
+
+    [data-theme="light"] {
+      --bg-base: #F8FAFC;
+      --bg-surface: #FFFFFF;
+      --bg-surface-elevated: #F1F5F9;
+      --bg-surface-glass: rgba(255, 255, 255, 0.85);
+      --border-subtle: rgba(0, 0, 0, 0.08);
+      --border-focus: rgba(26, 143, 227, 0.5);
+      --text-primary: #0F172A;
+      --text-secondary: #475569;
+      --text-muted: #64748B;
+      --primary: #0284C7;
+      --primary-hover: #0369A1;
+      --primary-glow: rgba(2, 132, 199, 0.2);
+      --accent-green: #10B981;
+      --accent-green-subtle: rgba(16, 185, 129, 0.12);
+      --accent-amber: #D97706;
+      --accent-purple: #7C3AED;
+      --card-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.06);
+      --badge-bg: rgba(2, 132, 199, 0.1);
+      --search-bg: #FFFFFF;
+      --highlight: rgba(254, 240, 138, 0.7);
+      --code-bg: rgba(0, 0, 0, 0.05);
+      --mesh-1: rgba(2, 132, 199, 0.08);
+      --mesh-2: rgba(16, 185, 129, 0.06);
+      --mesh-3: rgba(124, 58, 237, 0.05);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-base);
+      color: var(--text-primary);
+      line-height: 1.7;
+      position: relative;
+      overflow-x: hidden;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Ambient Background Mesh */
+    .bg-mesh {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background: 
+        radial-gradient(circle at 15% 15%, var(--mesh-1) 0%, transparent 45%),
+        radial-gradient(circle at 85% 30%, var(--mesh-2) 0%, transparent 40%),
+        radial-gradient(circle at 50% 85%, var(--mesh-3) 0%, transparent 50%);
+      opacity: 0.85;
+    }
+
+    /* Header Nav */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      background-color: var(--bg-surface-glass);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .header-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--text-primary);
+    }
+
+    .brand-logo {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #1A8FE3 0%, #00E676 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 16px var(--primary-glow);
+    }
+
+    .brand-logo svg {
+      width: 24px;
+      height: 24px;
+      fill: #ffffff;
+    }
+
+    .brand-title {
+      font-family: var(--font-display);
+      font-size: 1.45rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      background: linear-gradient(90deg, var(--text-primary) 30%, var(--primary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .brand-tag {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0.2rem 0.5rem;
+      background: var(--badge-bg);
+      color: var(--primary);
+      border-radius: 9999px;
+      letter-spacing: 0.05em;
+      border: 1px solid var(--border-subtle);
+      margin-left: 0.25rem;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .btn-icon {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      border-radius: 10px;
+      padding: 0.5rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      width: 38px;
+      height: 38px;
+    }
+
+    .btn-icon:hover {
+      color: var(--primary);
+      border-color: var(--border-focus);
+      background: var(--bg-surface-elevated);
+    }
+
+    .btn-action {
+      background: linear-gradient(135deg, var(--primary) 0%, #0284C7 100%);
+      color: #FFFFFF;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.85rem;
+      padding: 0.55rem 1.1rem;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      box-shadow: 0 4px 12px var(--primary-glow);
+    }
+
+    .btn-action:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px var(--primary-glow);
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      z-index: 1;
+      padding: 3.5rem 1.5rem 2.5rem;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.9rem;
+      border-radius: 9999px;
+      background: var(--badge-bg);
+      border: 1px solid var(--border-subtle);
+      color: var(--primary);
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-badge .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--accent-green);
+      box-shadow: 0 0 10px var(--accent-green);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(1.2); }
+    }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 span.gradient-text {
+      background: linear-gradient(135deg, #1A8FE3 20%, #00E676 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      max-width: 720px;
+      margin: 0 auto 2rem;
+    }
+
+    .metadata-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .metadata-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    /* Live Search & Filter Bar */
+    .search-section {
+      position: relative;
+      z-index: 2;
+      max-width: 680px;
+      margin: 0 auto 3rem;
+      padding: 0 1.5rem;
+    }
+
+    .search-wrapper {
+      position: relative;
+      background: var(--search-bg);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 0.35rem 0.5rem 0.35rem 1rem;
+      display: flex;
+      align-items: center;
+      box-shadow: var(--card-shadow);
+    }
+
+    .search-wrapper:focus-within {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px var(--primary-glow);
+    }
+
+    .search-icon {
+      color: var(--text-muted);
+      margin-right: 0.75rem;
+      display: flex;
+    }
+
+    .search-input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: var(--text-primary);
+    }
+
+    .search-input::placeholder {
+      color: var(--text-muted);
+    }
+
+    .search-tags {
+      display: flex;
+      gap: 0.4rem;
+      margin-top: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .search-tag-chip {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      font-size: 0.75rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 9999px;
+      cursor: pointer;
+    }
+
+    .search-tag-chip:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: var(--badge-bg);
+    }
+
+    /* At-a-Glance Dashboard Cards */
+    .highlights-grid {
+      position: relative;
+      z-index: 1;
+      max-width: 1240px;
+      margin: 0 auto 3.5rem;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .highlight-card {
+      background: var(--bg-surface-glass);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 1.5rem;
+      backdrop-filter: blur(16px);
+      box-shadow: var(--card-shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .highlight-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--card-accent, var(--primary)), transparent);
+    }
+
+    .highlight-card.blue { --card-accent: #1A8FE3; }
+    .highlight-card.green { --card-accent: #00E676; }
+    .highlight-card.purple { --card-accent: #8B5CF6; }
+    .highlight-card.amber { --card-accent: #F59E0B; }
+
+    .card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--badge-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      color: var(--card-accent, var(--primary));
+    }
+
+    .highlight-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+    }
+
+    .highlight-card p {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    /* Main Content Layout */
+    .content-layout {
+      position: relative;
+      z-index: 1;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 1.5rem 5rem;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    @media (max-width: 960px) {
+      .content-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Sidebar / Sticky TOC */
+    .sidebar {
+      position: sticky;
+      top: 5rem;
+      background: var(--bg-surface-glass);
+      border: 1px solid var(--border-subtle);
+      border-radius: 18px;
+      padding: 1.5rem;
+      backdrop-filter: blur(16px);
+      box-shadow: var(--card-shadow);
+      max-height: calc(100vh - 6.5rem);
+      overflow-y: auto;
+    }
+
+    .sidebar-title {
+      font-family: var(--font-display);
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .toc-link {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.5rem 0.75rem;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.87rem;
+      font-weight: 500;
+      border-radius: 8px;
+      border-left: 2px solid transparent;
+      line-height: 1.35;
+    }
+
+    .toc-link:hover {
+      color: var(--primary);
+      background: var(--badge-bg);
+    }
+
+    .toc-link.active {
+      color: var(--primary);
+      background: var(--badge-bg);
+      border-left-color: var(--primary);
+      font-weight: 600;
+    }
+
+    .toc-link span.num {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      min-width: 1.2rem;
+    }
+
+    .toc-link.active span.num {
+      color: var(--primary);
+    }
+
+    /* Policy Main Stream */
+    .policy-content {
+      min-width: 0;
+    }
+
+    .policy-section {
+      background: var(--bg-surface-glass);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: 2.25rem;
+      margin-bottom: 2rem;
+      backdrop-filter: blur(16px);
+      box-shadow: var(--card-shadow);
+      position: relative;
+      scroll-margin-top: 5.5rem;
+    }
+
+    .policy-section.highlighted-match {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 2px var(--primary-glow);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .section-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .section-icon-badge {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--badge-bg);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .policy-section h2 {
+      font-family: var(--font-display);
+      font-size: 1.45rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--text-primary);
+    }
+
+    .copy-link-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 0.35rem;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .copy-link-btn:hover {
+      color: var(--primary);
+      background: var(--badge-bg);
+    }
+
+    .policy-section h3 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin: 1.5rem 0 0.6rem;
+    }
+
+    .policy-section p {
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+      font-size: 0.96rem;
+    }
+
+    .policy-section ul, .policy-section ol {
+      color: var(--text-secondary);
+      padding-left: 1.4rem;
+      margin-bottom: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .policy-section li strong {
+      color: var(--text-primary);
+    }
+
+    /* Notice Pill Callout */
+    .policy-callout {
+      border-radius: 12px;
+      padding: 1.1rem 1.25rem;
+      margin: 1.25rem 0;
+      display: flex;
+      gap: 0.85rem;
+      align-items: flex-start;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-surface-elevated);
+    }
+
+    .policy-callout.info {
+      border-left: 4px solid var(--primary);
+    }
+
+    .policy-callout.security {
+      border-left: 4px solid var(--accent-green);
+    }
+
+    .policy-callout.warning {
+      border-left: 4px solid var(--accent-amber);
+    }
+
+    .callout-icon {
+      flex-shrink: 0;
+      margin-top: 0.15rem;
+    }
+
+    .policy-callout.info .callout-icon { color: var(--primary); }
+    .policy-callout.security .callout-icon { color: var(--accent-green); }
+    .policy-callout.warning .callout-icon { color: var(--accent-amber); }
+
+    .callout-content {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    .callout-content strong {
+      color: var(--text-primary);
+      display: block;
+      margin-bottom: 0.25rem;
+      font-family: var(--font-display);
+    }
+
+    /* Interactive Privacy Simulator / Sandbox */
+    .privacy-sandbox {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .sandbox-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.25rem;
+    }
+
+    .sandbox-title {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-primary);
+    }
+
+    .sandbox-badge {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 0.2rem 0.55rem;
+      border-radius: 9999px;
+      background: var(--accent-green-subtle);
+      color: var(--accent-green);
+      border: 1px solid rgba(0, 230, 118, 0.2);
+    }
+
+    .toggle-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.85rem 0;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .toggle-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .toggle-info {
+      padding-right: 1.5rem;
+    }
+
+    .toggle-label {
+      font-weight: 600;
+      font-size: 0.92rem;
+      color: var(--text-primary);
+      display: block;
+      margin-bottom: 0.15rem;
+    }
+
+    .toggle-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Modern Switch UI */
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 48px;
+      height: 26px;
+      flex-shrink: 0;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(--border-subtle);
+      border: 1px solid var(--border-subtle);
+      transition: .25s;
+      border-radius: 34px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: #FFFFFF;
+      transition: .25s;
+      border-radius: 50%;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+
+    input:checked + .slider {
+      background-color: var(--primary);
+      border-color: var(--primary);
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(22px);
+    }
+
+    .sandbox-preview-box {
+      margin-top: 1.25rem;
+      padding: 0.9rem 1.1rem;
+      border-radius: 10px;
+      background: var(--bg-surface-elevated);
+      border: 1px dashed var(--border-subtle);
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    /* Structured Data Tables */
+    .table-container {
+      overflow-x: auto;
+      margin: 1.25rem 0;
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+    }
+
+    .policy-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.88rem;
+    }
+
+    .policy-table th {
+      background: var(--bg-surface-elevated);
+      color: var(--text-primary);
+      font-weight: 600;
+      font-family: var(--font-display);
+      padding: 0.9rem 1.1rem;
+      border-bottom: 1px solid var(--border-subtle);
+      white-space: nowrap;
+    }
+
+    .policy-table td {
+      padding: 0.9rem 1.1rem;
+      border-bottom: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      vertical-align: top;
+    }
+
+    .policy-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .chip-badge {
+      display: inline-block;
+      padding: 0.2rem 0.5rem;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      background: var(--badge-bg);
+      color: var(--primary);
+    }
+
+    /* Footer */
+    .footer {
+      border-top: 1px solid var(--border-subtle);
+      background: var(--bg-surface);
+      position: relative;
+      z-index: 1;
+      padding: 3.5rem 1.5rem 2.5rem;
+    }
+
+    .footer-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .footer-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .footer-brand h4 {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 800;
+      margin-bottom: 0.6rem;
+      color: var(--text-primary);
+    }
+
+    .footer-brand p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      max-width: 420px;
+      line-height: 1.6;
+    }
+
+    .footer-col h5 {
+      font-family: var(--font-display);
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .footer-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.88rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+
+    .footer-bottom {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    /* Floating Scroll-to-Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: var(--card-shadow);
+      z-index: 99;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(12px);
+      transition: all 0.3s ease;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .back-to-top:hover {
+      background: var(--primary);
+      color: #FFFFFF;
+      border-color: var(--primary);
+      box-shadow: 0 4px 16px var(--primary-glow);
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--primary);
+      color: var(--text-primary);
+      padding: 0.75rem 1.4rem;
+      border-radius: 10px;
+      box-shadow: var(--card-shadow);
+      z-index: 1000;
+      font-size: 0.88rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      pointer-events: none;
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    /* Print View */
+    @media print {
+      .bg-mesh, .header, .search-section, .sidebar, .back-to-top, .nav-actions, .privacy-sandbox, .footer {
+        display: none !important;
+      }
+      .content-layout {
+        display: block !important;
+        padding: 0 !important;
+      }
+      .policy-section {
+        border: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
+        padding: 1rem 0 !important;
+        page-break-inside: avoid;
+      }
+      body {
+        color: #000 !important;
+        background: #fff !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient Light Mesh Background -->
+  <div class="bg-mesh" aria-hidden="true"></div>
+
+  <!-- Header Nav -->
+  <header class="header">
+    <div class="header-container">
+      <a href="#" class="brand-group" aria-label="Crickdin Home">
+        <div class="brand-logo">
+          <!-- Cricket Stumps / Ball Stylized SVG -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 4v16h2V4H5zm6-2v18h2V2h-2zm6 4v14h2V6h-2zM3 3h18v2H3V3z"/>
+          </svg>
+        </div>
+        <div>
+          <span class="brand-title">Crickdin</span>
+          <span class="brand-tag">Cricket OS</span>
+        </div>
+      </a>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button id="themeToggleBtn" class="btn-icon" title="Toggle Light/Dark Theme" aria-label="Toggle Theme">
+          <svg id="themeIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="12" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Print Policy -->
+        <button id="printBtn" class="btn-icon" title="Print / Save as PDF" aria-label="Print Document">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 6 2 18 2 18 9"></polyline>
+            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+            <rect x="6" y="14" width="12" height="8"></rect>
+          </svg>
+        </button>
+
+        <!-- Support Link -->
+        <a href="mailto:privacy@crickdin.com" class="btn-action">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <span>Contact Privacy Desk</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Header -->
+  <main>
+    <section class="hero">
+      <div class="hero-badge">
+        <span class="pulse-dot"></span>
+        <span>Google Play &amp; DPDP Act 2023 Compliant</span>
+      </div>
+      <h1>Privacy Policy &amp; <br><span class="gradient-text">Data Transparency</span></h1>
+      <p>
+        At Crickdin, we believe your cricket career, stats, match videos, and payments belong to you. 
+        Here is our crystal-clear commitment on what we collect, how it empowers your game, and how you retain 100% control.
+      </p>
+      <div class="metadata-bar">
+        <div class="metadata-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Effective Date: <strong>September 13, 2026</strong></span>
+        </div>
+        <div class="metadata-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>App Namespace: <code>com.crickdin</code></span>
+        </div>
+        <div class="metadata-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Jurisdiction: India &amp; Global Players</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Search Bar -->
+    <section class="search-section" aria-label="Search Privacy Policy">
+      <div class="search-wrapper">
+        <span class="search-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </span>
+        <input type="text" id="policySearchInput" class="search-input" placeholder="Search keywords: 'PhonePe', 'Camera', 'Video Reels', 'Delete Account', 'Location'...">
+      </div>
+      <div class="search-tags">
+        <span class="search-tag-chip" data-term="PhonePe">💳 PhonePe &amp; UPI</span>
+        <span class="search-tag-chip" data-term="Camera">📹 Camera &amp; Studio</span>
+        <span class="search-tag-chip" data-term="Location">📍 Turf Discovery</span>
+        <span class="search-tag-chip" data-term="Delete">🗑️ Delete Account</span>
+        <span class="search-tag-chip" data-term="Discoverable">🔍 Player Privacy</span>
+      </div>
+    </section>
+
+    <!-- At-a-Glance Highlights Grid -->
+    <section class="highlights-grid" aria-label="Privacy Highlights">
+      <div class="highlight-card blue">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <h3>Verified Cricket CV</h3>
+        <p>Your match stats, runs, wickets, and tournament fixtures are publicly displayed to celebrate your achievements, while private contact details stay locked behind your toggles.</p>
+      </div>
+
+      <div class="highlight-card green">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Zero Data Selling</h3>
+        <p>We do not sell, rent, or trade your personal information, phone numbers, or match history to ad brokers or predatory third parties. Ever.</p>
+      </div>
+
+      <div class="highlight-card purple">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <h3>Bank-Grade Payments</h3>
+        <p>Turf bookings and entry fees are processed via RBI-licensed partners (PhonePe). Crickdin never sees or stores your Debit/Credit card numbers or UPI PINs.</p>
+      </div>
+
+      <div class="highlight-card amber">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+        </div>
+        <h3>Instant Account Purge</h3>
+        <p>You have the absolute right to delete your Crickdin account and all associated personal media directly in the app or via our one-click web deletion channel.</p>
+      </div>
+    </section>
+
+    <!-- Main Content Layout -->
+    <div class="content-layout">
+      <!-- Sticky Sidebar Table of Contents -->
+      <aside class="sidebar" aria-label="Table of Contents">
+        <div class="sidebar-title">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+          <span>Contents</span>
+        </div>
+        <nav>
+          <ul class="toc-list" id="tocList">
+            <li><a href="#section-1" class="toc-link active"><span class="num">01.</span> Scope &amp; Overview</a></li>
+            <li><a href="#section-2" class="toc-link"><span class="num">02.</span> Information We Collect</a></li>
+            <li><a href="#section-3" class="toc-link"><span class="num">03.</span> Device Permissions</a></li>
+            <li><a href="#section-4" class="toc-link"><span class="num">04.</span> Payments &amp; Transactions</a></li>
+            <li><a href="#section-5" class="toc-link"><span class="num">05.</span> In-App Privacy Controls</a></li>
+            <li><a href="#section-6" class="toc-link"><span class="num">06.</span> How We Use Your Data</a></li>
+            <li><a href="#section-7" class="toc-link"><span class="num">07.</span> Third-Party Processors</a></li>
+            <li><a href="#section-8" class="toc-link"><span class="num">08.</span> Retention &amp; Deletion</a></li>
+            <li><a href="#section-9" class="toc-link"><span class="num">09.</span> Child Privacy &amp; Safety</a></li>
+            <li><a href="#section-10" class="toc-link"><span class="num">10.</span> Security Architecture</a></li>
+            <li><a href="#section-11" class="toc-link"><span class="num">11.</span> Grievance &amp; Contact</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Policy Content -->
+      <article class="policy-content" id="policyContent">
+
+        <!-- SECTION 1 -->
+        <section id="section-1" class="policy-section">
+          <div class="section-header">
+            <div class="section-title-wrap">
+              <div class="section-icon-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="12 8 8 12 12 16 12 8"/></svg>
+              </div>
+              <h2>1. Scope, Purpose &amp; Who We Are</h2>
+            </div>
+            <button class="copy-link-btn" title="Copy section link" onclick="copySectionLink('section-1')">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </button>
+          </div>
+          <p>
+            Welcome to <strong>Crickdin</strong> (also known as <em>crickedIn</em>, package <code>com.crickdin</code>), the premier Cricket Operating System ("Cricket OS"). 
+            This Privacy Policy sets forth our clear, transparent standards regarding how we collect, store, process, and protect your personal information when you access our Android mobile application, web applications, and associated services.
+          </p>
+          <p>
+            By installing, signing into, or using Crickdin, you consent to the practices described in this document. If you do not agree with any provision, you may adjust your in-app privacy toggles or discontinue using the platform at any time.
+          </p>
+          <div class="policy-callout info">
+            <div class="callout-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            </div>
+            <div class="callout-content">
+              <strong>Core Philosophy</strong>
+              Crickdin operates on the principle of progressive consent and minimal necessary access. We collect only what is essential to provide live ball-by-ball scoring, player hiring, venue booking, and community highlights.
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 2 -->
+        <section id="section-2" class="policy-section">
+          <div class="section-header">
+            <div class="section-title-wrap">
+              <div class="section-icon-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              </div>
+              <h2>2. Information We Collect</h2>
+            </div>
+            <button class="copy-link-btn" title="Copy section link" onclick="copySectionLink('section-2')">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </button>
+          </div>
+          <p>Depending on how you use Crickdin, we collect the following categories of data:</p>
+          
+          <div class="table-container">
+            <table class="policy-table">
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Examples of Data</th>
+                  <th>Purpose &amp; Visibility</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Cricket Profile &amp; Identity</strong></td>
+                  <td>Full Name, Mobile Number, Email, Profile Picture, Batting/Bowling Style (e.g., Right-hand bat, Off-break), Player Role (Batsman, Bowler, All-Rounder, Wicketkeeper), Playing City.</td>
+                  <td>To create your Verified Cricket CV and connect you with local teams. Visibility governed by your privacy toggles.</td>
+                </tr>
+                <tr>
+                  <td><strong>Match &amp; Career Statistics</strong></td>
+                  <td>Runs scored, balls faced, wickets taken, strike rates, economy rates, catches, dismissals, player of the match awards, tournament championship leaderboards.</td>
+                  <td><span class="chip-badge">Public Sport Record</span> Necessary for live scoring integrity, tournament brackets, and career history.</td>
+                </tr>
+                <tr>
+                  <td><strong>Media, Highlights &amp; Posts</strong></td>
+                  <td>Video clips uploaded via Record Studio or gallery, photo posts, match commentary captions, likes, and comments.</td>
+                  <td>Shared across the community feed according to post privacy level (Public / Team / Private).</td>
+                </tr>
+                <tr>
+                  <td><strong>Turf &amp; Venue Bookings</strong></td>
+                  <td>Selected venue slots, turf ID, booking timestamps, player count, split-pay participation, transaction reference.</td>
+                  <td>To lock your turf reservation with venue owners and prevent double bookings.</td>
+                </tr>
+                <tr>
+                  <td><strong>Approximate / Precise Location</strong></td>
+                  <td>City, pin code, or GPS coordinates (only when location permission is granted).</td>
+                  <td>To discover nearby cricket turfs, open match challenges, and local tournaments within your vicinity.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- SECTION 3 -->
+        <section id="section-3" class="policy-section">
+          <div class="section-header">
+            <div class="section-title-wrap">
+              <div class="section-icon-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+              </div>
+              <h2>3. Device Permissions &amp; Hardware Access</h2>
+            </div>
+            <button class="copy-link-btn" title="Copy section link" onclick="copySectionLink('section-3')">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </button>
+          </div>
+          <p>
+            Crickdin requests Android runtime permissions only when an action directly requires it. You can revoke any permission at any time through your device settings:
+          </p>
+          <ul>
+            <li>
+              <strong>Camera (<code>android.permission.CAMERA</code>):</strong> 
+              Used in our Video Studio to record match action, bowling actions, boundary highlights, and to snap profile photos. Camera is never accessed in the background.
+            </li>
+            <li>
+              <strong>Microphone (<code>android.permission.RECORD_AUDIO</code>):</strong> 
+              Used strictly during video recording to capture live match atmosphere and audio commentary.
+            </li>
+            <li>
+              <strong>Media &amp; Photos (<code>READ_MEDIA_IMAGES</code>, <code>READ_MEDIA_VIDEO</code>):</strong> 
+              Allows you to pick match photos and cricket reels from your device gallery to publish to your profile or feed.
+            </li>
+            <li>
+              <strong>Location (<code>ACCESS_FINE_LOCATION</code>, <code>ACCESS_COARSE_LOCATION</code>):</strong> 
+              Used exclusively while searching for nearby turfs, nets, and active matches in your city.
+            </li>
+            <li>
+              <strong>Notifications (<code>POST_NOTIFICATIONS</code>):</strong> 
+              Delivers live score updates, team match requests, tournament schedule shifts, and booking confirmations.
+            </li>
+          </ul>
+        </section>
+
+        <!-- SECTION 4 -->
+        <section id="section-4" class="policy-section">
+          <div class="section-header">
+            <div class="section-title-wrap">
+              <div class="section-icon-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+              </div>
+              <h2>4. Payments &amp; Financial Security</h2>
+            </div>
+            <button class="copy-link-btn" title="Copy section link" onclick="copySectionLink('section-4')">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </button>
+          </div>
+          <p>
+            When booking a cricket turf, registering for a paid tournament, or using Split-Pay, payments are routed through 
+            <strong>PhonePe Payment Gateway</strong>, a Reserve Bank of India (RBI) authorized payment aggregator:
+          </p>
+          <ul>
+            <li><strong>No Storage of Sensitive Card/PIN Data:</strong> Crickdin does NOT store, log, or transmit your credit card numbers, CVV, debit card PIN, or UPI MPIN on our servers.</li>
+            <li><strong>Encrypted Tokens:</strong> Transaction authentication occurs entirely inside PhonePe's encrypted sandbox or your native UPI app (GPay, PhonePe, Paytm).</li>
+            <li><strong>Transaction Records:</strong> We retain only standard non-sensitive reconciliation details: Order ID, Payment Gateway Transaction Reference, Amount Paid, Timestamp, and Slot Reservation Status.</li>
+          </ul>
+          <div class="policy-callout security">
+            <div class="callout-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="callout-content">
+              <strong>PCI-DSS Compliant Infrastructure</strong>
+              All payment transactions meet PCI-DSS Level 1 compliance requirements managed by certified payment aggregators.
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 5 -->
+        <section id="section-5" class="policy-section">
+          <div class="section-header">
+            <div class="section-title-wrap">
+              <div class="section-icon-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+              </div>
+              <h2>5. Your In-App Privacy Controls</h2>
+            </div>
+            <button class="copy-link-btn" title="Copy section link" onclick="copySectionLink('section-5')">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </button>
+          </div>
+          <p>
+            Unlike traditional platforms that force your data into the open, Crickdin provides granular privacy switches directly in your Profile Settings (<strong>Profile &gt; Settings &gt; Privacy</strong>).
+          </p>
+
+          <!-- Interactive Privacy Simulator -->
+          <div class="privacy-sandbox">
+            <div class="sandbox-header">
+              <div class="sandbox-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                <span>Interactive In-App Privacy Sandbox</span>
+              </div>
+              <span class="sandbox-badge">Try Live Toggles</span>
+            </div>
+
+            <div class="toggle-row">
+              <div class="toggle-info">
+                <span class="toggle-label">Show Phone on Hire</span>
+                <span class="toggle-sub">Allow captains and organizers who want to hire you to see your phone number</span>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="simPhoneToggle" onchange="updateSandboxFeedback()">
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <div class="toggle-row">
+              <div class="toggle-info">
+                <span class="toggle-label">Show Match Fee</span>
+                <span class="toggle-sub">Display your expected per-match fee on your public player profile</span>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="simFeeToggle" checked onchange="updateSandboxFeedback()">
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <div class="toggle-row">
+              <div class="toggle-info">
+                <span class="toggle-label">Show Exact Area</span>
+                <span class="toggle-sub">Show your specific neighborhood/ground area instead of just city name</span>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="simAreaToggle" onchange="updateSandboxFeedback()">
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <div class="toggle-row">
+              <div class="toggle-info">
+                <span class="toggle-label">Discoverable in Talent Search</span>
+                <span class="toggle-sub">Allow captains to find your profile when searching for bowlers, batsmen, or all-rounders</span>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="simDiscoverableToggle" checked onchange="updateSandboxFeedback()">
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <div class="sandbox-preview-box" id="sandboxFeedback">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              <span id="sandboxFeedbackText">Your profile is visible in talent searches with your match fee. Your phone number &amp; exact area remain strictly hidden.</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 6 -->
+        <section id="section-6" class="policy-section">
+          <div class="section-header">
+            <div class="section-title-wrap">
+              <div class="section-icon-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              </div>
+              <h2>6. How We Use &amp; Process Your Data</h2>
+            </div>
+            <button class="copy-link-btn" title="Copy section link" onclick="copySectionLink('section-6')">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </button>
+          </div>
+          <p>We process your data strictly under valid legal bases (contract performance, legitimate interests, and explicit consent) to:</p>
+          <ol>
+            <li><strong>Power Ball-by-Ball Live Scoring:</strong> Synchronize match events offline-first, updating Net Run Rates (NRR), tournament knockout trees, and Orange/Purple cap leaderboards.</li>
+            <li><strong>Facilitate Talent Matching:</strong> Match captains in need of 11th-hour replacement players with verified local cricketers based on skill attributes.</li>
+            <li><strong>Enable Turf Reservations:</strong> Confirm turf slots with ground owners and verify attendance check-ins.</li>
+            <li><strong>Deliver Social Community Features:</strong> Distribute cricket reels, match photos, and tournament awards on the community feed.</li>
+            <li><strong>Maintain Fair Play &amp; Security:</strong> Prevent multi-team tournament impersonation, cheating, and fraudulent payments.</li>
+          </ol>
+        </section>
+
+        <!-- SECTION 7 -->
+        <section id="section-7" class="policy-section">
+          <div class="section-header">
+            <div class="section-title-wrap">
+              <div class="section-icon-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <h2>7. Third-Party Partners &amp; Cloud Infrastructure</h2>
+            </div>
+            <button class="copy-link-btn" title="Copy section link" onclick="copySectionLink('section-7')">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </button>
+          </div>
+          <p>
+            We rely on battle-tested, enterprise-grade cloud partners who are bound by confidentiality and strict data processing agreements:
+          </p>
+          <ul>
+            <li><strong>Supabase Inc. (Database &amp; Authentication):</strong> Cloud-hosted PostgreSQL database with Row-Level Security (RLS) ensuring strict tenant isolation.</li>
+            <li><strong>PhonePe (Payment Gateway):</strong> RBI-licensed payment infrastructure for handling slot bookings and tournament entry fees.</li>
+            <li><strong>Google Play Services / Firebase:</strong> Crashlytics for real-time crash diagnosis and Firebase Cloud Messaging (FCM) for push notifications.</li>
+            <li><strong>Cloudflare / Global CDN:</strong> Secure, cached delivery of video highlights and match images.</li>
+          </ul>
+        </section>
+
+        <!-- SECTION 8 -->
+        <section id="section-8" class="policy-section">
+          <div class="section-header">
+            <div class="section-title-wrap">
+              <div class="section-icon-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+              </div>
+              <h2>8. Data Retention &amp; Account Deletion</h2>
+            </div>
+            <button class="copy-link-btn" title="Copy section link" onclick="copySectionLink('section-8')">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </button>
+          </div>
+          <p>
+            We retain your profile and media for as long as your account remains active. You maintain full ownership of your data and can execute your right to be forgotten:
+          </p>
+          <h3>How to Delete Your Account:</h3>
+          <ol>
+            <li><strong>Inside the Crickdin App:</strong> Navigate to <code>Profile &gt; Settings &gt; Account &gt; Delete Account</code>. Confirm with your registered credentials.</li>
+            <li><strong>Via Web / Email Request:</strong> Send an email from your registered address to <a href="mailto:privacy@crickdin.com" style="color: var(--primary);">privacy@crickdin.com</a> with the subject line <em>"Delete My Crickdin Account"</em>.</li>
+          </ol>
+          <div class="policy-callout warning">
+            <div class="callout-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </div>
+            <div class="callout-content">
+              <strong>Impact of Account Deletion</strong>
+              Account deletion permanently wipes your profile photos, video clips, private messages, and contact details within 30 days. Historical match records (e.g. "Player scored 45 in Match #102") remain anonymized to preserve match scorecard integrity for both teams.
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 9 -->
+        <section id="section-9" class="policy-section">
+          <div class="section-header">
+            <div class="section-title-wrap">
+              <div class="section-icon-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a5 5 0 0 1 5 5v3a5 5 0 0 1-10 0V7a5 5 0 0 1 5-5z"/><path d="M19 11v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+              </div>
+              <h2>9. Children &amp; Minor Safety</h2>
+            </div>
+            <button class="copy-link-btn" title="Copy section link" onclick="copySectionLink('section-9')">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </button>
+          </div>
+          <p>
+            Crickdin is designed for sports participants aged 13 and above (or 16 and above where required by regional laws). We do not knowingly collect personal data from children under 13 without verifiable parental or academy guardian consent. If we learn a minor has registered without guardian consent, we promptly remove the record.
+          </p>
+        </section>
+
+        <!-- SECTION 10 -->
+        <section id="section-10" class="policy-section">
+          <div class="section-header">
+            <div class="section-title-wrap">
+              <div class="section-icon-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </div>
+              <h2>10. Security &amp; Encryption Standards</h2>
+            </div>
+            <button class="copy-link-btn" title="Copy section link" onclick="copySectionLink('section-10')">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </button>
+          </div>
+          <p>We deploy multi-layered safeguards to keep your sports records resilient against breaches:</p>
+          <ul>
+            <li><strong>In-Transit Encryption:</strong> All client-to-server traffic is enforced with modern TLS 1.3 cryptographic protocols with HSTS.</li>
+            <li><strong>At-Rest Encryption:</strong> All database stores and media volumes utilize AES-256 storage encryption.</li>
+            <li><strong>Row Level Security (RLS):</strong> Granular SQL access policies ensure users can only modify their own profile data, posts, and authorized scoring matches.</li>
+            <li><strong>Continuous Vulnerability Auditing:</strong> Regular automated security scanning of backend endpoints and mobile application builds.</li>
+          </ul>
+        </section>
+
+        <!-- SECTION 11 -->
+        <section id="section-11" class="policy-section">
+          <div class="section-header">
+            <div class="section-title-wrap">
+              <div class="section-icon-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <h2>11. Grievance Officer &amp; Contact Details</h2>
+            </div>
+            <button class="copy-link-btn" title="Copy section link" onclick="copySectionLink('section-11')">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </button>
+          </div>
+          <p>
+            In accordance with India's Information Technology Act 2000, the Digital Personal Data Protection (DPDP) Act 2023, and global data protection regulations, our designated Grievance Officer can be contacted directly:
+          </p>
+          <div class="table-container">
+            <table class="policy-table">
+              <tbody>
+                <tr>
+                  <td><strong>Platform Name</strong></td>
+                  <td>Crickdin (crickedIn) — The Cricket Operating System</td>
+                </tr>
+                <tr>
+                  <td><strong>App Bundle ID</strong></td>
+                  <td><code>com.crickdin</code></td>
+                </tr>
+                <tr>
+                  <td><strong>Grievance Officer</strong></td>
+                  <td>Privacy &amp; Compliance Cell</td>
+                </tr>
+                <tr>
+                  <td><strong>Official Email</strong></td>
+                  <td><a href="mailto:privacy@crickdin.com" style="color: var(--primary); font-weight: 600;">privacy@crickdin.com</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Support Portal</strong></td>
+                  <td><a href="mailto:support@crickdin.com" style="color: var(--primary);">support@crickdin.com</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Resolution SLA</strong></td>
+                  <td>We acknowledge all grievances within 24 hours and resolve inquiries within 15 business days.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+      </article>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h4>Crickdin</h4>
+        <p>The complete Cricket Operating System (Cricket OS) empowering players, organizers, scorers, and turf venues with verified stats, instant slot booking, and professional tournament infrastructure.</p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Legal &amp; Trust</h5>
+        <ul class="footer-links">
+          <li><a href="#section-1">Privacy Policy</a></li>
+          <li><a href="#section-5">In-App Controls</a></li>
+          <li><a href="#section-8">Delete Account</a></li>
+          <li><a href="#section-4">Payment Security</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Get Help</h5>
+        <ul class="footer-links">
+          <li><a href="mailto:privacy@crickdin.com">Contact Privacy Desk</a></li>
+          <li><a href="mailto:support@crickdin.com">Player Support</a></li>
+          <li><a href="#section-11">Grievance Officer</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2026 Crickdin Technologies. All rights reserved.</span>
+      <span>Designed for Cricketers Worldwide • Clean &amp; Transparent</span>
+    </div>
+  </footer>
+
+  <!-- Scroll-to-Top Floating Button -->
+  <button id="backToTopBtn" class="back-to-top" title="Scroll to Top" aria-label="Scroll to Top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+  </button>
+
+  <!-- Toast Notification Container -->
+  <div id="toast" class="toast" role="alert" aria-live="polite">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+    <span id="toastMsg">Section link copied to clipboard!</span>
+  </div>
+
+  <!-- Interactive Client-side Script -->
+  <script>
+    // 1. Theme Toggle Logic
+    const htmlEl = document.documentElement;
+    const themeToggleBtn = document.getElementById('themeToggleBtn');
+    const themeIcon = document.getElementById('themeIcon');
+
+    function setTheme(theme) {
+      htmlEl.setAttribute('data-theme', theme);
+      localStorage.setItem('crickdin_theme', theme);
+      if (theme === 'light') {
+        themeIcon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>';
+      } else {
+        themeIcon.innerHTML = '<circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>';
+      }
+    }
+
+    const savedTheme = localStorage.getItem('crickdin_theme') || 
+      (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    setTheme(savedTheme);
+
+    themeToggleBtn.addEventListener('click', () => {
+      const current = htmlEl.getAttribute('data-theme') || 'dark';
+      setTheme(current === 'dark' ? 'light' : 'dark');
+    });
+
+    // 2. Print Document
+    document.getElementById('printBtn').addEventListener('click', () => {
+      window.print();
+    });
+
+    // 3. Scroll to Top Floating Button
+    const backToTopBtn = document.getElementById('backToTopBtn');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // 4. Toast Notification
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toastMsg');
+      toastMsg.textContent = message;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2600);
+    }
+
+    // 5. Copy Section Link
+    function copySectionLink(sectionId) {
+      const url = `${window.location.origin}${window.location.pathname}#${sectionId}`;
+      navigator.clipboard.writeText(url).then(() => {
+        showToast("Link to section copied to clipboard!");
+      }).catch(() => {
+        showToast("Link ready: #" + sectionId);
+      });
+    }
+
+    // 6. Sticky Sidebar Scroll-Spy
+    const sections = document.querySelectorAll('.policy-section');
+    const tocLinks = document.querySelectorAll('.toc-link');
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '-80px 0px -60% 0px',
+      threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          tocLinks.forEach(link => {
+            if (link.getAttribute('href') === `#${id}`) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
+          });
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach(section => observer.observe(section));
+
+    // 7. Live Keyword Search & Filter
+    const searchInput = document.getElementById('policySearchInput');
+    const tagChips = document.querySelectorAll('.search-tag-chip');
+
+    function filterPolicy(query) {
+      const q = query.trim().toLowerCase();
+      let firstMatch = null;
+
+      sections.forEach(section => {
+        const text = section.innerText.toLowerCase();
+        if (q === "") {
+          section.style.display = 'block';
+          section.classList.remove('highlighted-match');
+        } else if (text.includes(q)) {
+          section.style.display = 'block';
+          section.classList.add('highlighted-match');
+          if (!firstMatch) firstMatch = section;
+        } else {
+          section.style.display = 'none';
+          section.classList.remove('highlighted-match');
+        }
+      });
+
+      if (firstMatch && q.length > 2) {
+        firstMatch.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    searchInput.addEventListener('input', (e) => {
+      filterPolicy(e.target.value);
+    });
+
+    tagChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        const term = chip.getAttribute('data-term');
+        searchInput.value = term;
+        filterPolicy(term);
+      });
+    });
+
+    // 8. Interactive Privacy Sandbox Simulator Feedback
+    function updateSandboxFeedback() {
+      const phoneOn = document.getElementById('simPhoneToggle').checked;
+      const feeOn = document.getElementById('simFeeToggle').checked;
+      const areaOn = document.getElementById('simAreaToggle').checked;
+      const discOn = document.getElementById('simDiscoverableToggle').checked;
+      const feedbackText = document.getElementById('sandboxFeedbackText');
+
+      if (!discOn) {
+        feedbackText.textContent = "Ghost Mode Active: Your profile is completely hidden from public talent discovery and captain searches.";
+        return;
+      }
+
+      let parts = ["Profile is discoverable"];
+      if (phoneOn) {
+        parts.push("Phone number is visible to hiring captains");
+      } else {
+        parts.push("Phone number remains strictly private");
+      }
+
+      if (feeOn) {
+        parts.push("Match fee is publicly visible");
+      } else {
+        parts.push("Match fee is concealed");
+      }
+
+      if (areaOn) {
+        parts.push("Hyperlocal neighborhood ground shown");
+      } else {
+        parts.push("Only broad city name visible");
+      }
+
+      feedbackText.textContent = parts.join(" • ") + ".";
+    }
+  </script>
+</body>
+</html>
